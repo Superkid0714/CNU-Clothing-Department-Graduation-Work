@@ -1,5 +1,7 @@
-@import 'tailwindcss';
+@import 'tailwindcss/preflight';
+@tailwind utilities;
 
+/* 전체 화면 기본 레이아웃 설정 */
 html,
 body,
 #root {
@@ -9,20 +11,21 @@ body,
   padding: 0;
 }
 
+/* 기본 폰트 및 렌더링 설정 */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family:
+    'Roboto Condensed', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(33, 37, 41, 0.87);
-  background-color: #ffffff;
 
+  /* 텍스트 렌더링 개선 */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* 링크 기본 스타일 */
 a {
   font-weight: 500;
   color: #3b82f6; /* Tailwind blue-500 */
@@ -32,42 +35,11 @@ a:hover {
   color: #2563eb; /* Tailwind blue-600 */
 }
 
-h1 {
-  font-size: 2.25rem; /* Tailwind text-3xl */
-  line-height: 1.1;
-  font-weight: 700;
-}
-
-button {
-  border-radius: 0.5rem; /* Tailwind rounded */
-  border: none;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: 500;
-  background-color: #3b82f6; /* Tailwind blue-500 */
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-button:hover {
-  background-color: #2563eb; /* Tailwind blue-600 */
-}
-button:focus {
-  outline: 2px solid #2563eb;
-  outline-offset: 2px;
-}
-
+/* 시스템 다크모드 대응 */
 @media (prefers-color-scheme: dark) {
   :root {
-    color: #e0e0e0;
+    color-scheme: dark;
     background-color: #121212;
-  }
-
-  button {
-    background-color: #1e40af; /* Tailwind blue-800 */
-  }
-
-  button:hover {
-    background-color: #1e3a8a; /* Tailwind blue-900 */
+    color: #e0e0e0;
   }
 }
