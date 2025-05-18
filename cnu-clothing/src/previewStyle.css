@@ -1,0 +1,84 @@
+/* Preview page animations and styles */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite ease-in-out;
+}
+
+/* Font display for the main title */
+.font-display {
+  font-family: 'Spectral', 'Times New Roman', serif;
+  letter-spacing: -0.02em;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+/* Slide up animation */
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+/* Additional utility classes */
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.duration-1000 {
+  transition-duration: 1000ms;
+}
+
+/* Improve text rendering */
+.text-blue-800 {
+  color: #0d4c93;
+}
+
+/* For centering content */
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+/* Group hover effect */
+.group:hover .group-hover\:opacity-80 {
+  opacity: 0.8;
+}
