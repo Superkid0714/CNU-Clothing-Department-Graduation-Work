@@ -1,45 +1,38 @@
 @import 'tailwindcss/preflight';
 @tailwind utilities;
 
-/* 전체 화면 기본 레이아웃 설정 */
-html,
-body,
-#root {
-  height: 100%;
-  width: 100%;
+/* 매우 기본적인 스타일만 유지 */
+body {
   margin: 0;
   padding: 0;
-}
-
-/* 기본 폰트 및 렌더링 설정 */
-:root {
+  background-color: white;
+  color: #333;
   font-family:
-    'Roboto Condensed', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  /* 텍스트 렌더링 개선 */
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    'Noto Sans KR',
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    sans-serif;
 }
 
-/* 링크 기본 스타일 */
-a {
-  font-weight: 500;
-  color: #3b82f6; /* Tailwind blue-500 */
-  text-decoration: none;
-}
-a:hover {
-  color: #2563eb; /* Tailwind blue-600 */
+#root {
+  min-height: 100vh;
 }
 
-/* 시스템 다크모드 대응 */
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    background-color: #121212;
-    color: #e0e0e0;
-  }
+/* 기본 텍스트 색상 */
+.text-blue-800 {
+  color: #0d4c93;
+}
+
+.text-blue-900 {
+  color: #0c4a8c;
+}
+
+/* 기본 버튼 스타일 */
+.bg-blue-800 {
+  background-color: #0d4c93;
+}
+
+.bg-blue-700:hover {
+  background-color: #1a5da3;
 }
