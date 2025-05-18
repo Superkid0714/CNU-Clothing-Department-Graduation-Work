@@ -69,10 +69,10 @@ const PreviewPosterPage = () => {
             {/* 버튼 */}
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <button
-                onClick={() => navigate('/main')}
+                onClick={() => navigate('/gallery')}
                 className="px-8 py-3 bg-blue-800 text-white text-lg font-medium rounded-sm hover:bg-blue-700 transition-colors duration-300 shadow-md"
               >
-                전시 소개 보기
+                작품 갤러리 보기
               </button>
               <button
                 onClick={() =>
