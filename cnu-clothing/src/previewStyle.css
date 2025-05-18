@@ -13,6 +13,27 @@
   animation: bounce 1s infinite ease-in-out;
 }
 
+/* 애니메이션 딜레이 클래스 추가 */
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-600 {
+  animation-delay: 0.6s;
+}
+
+.delay-800 {
+  animation-delay: 0.8s;
+}
+
+.delay-1000 {
+  animation-delay: 1s;
+}
+
 /* Font display for the main title */
 .font-display {
   font-family: 'Spectral', 'Times New Roman', serif;
@@ -81,4 +102,13 @@
 /* Group hover effect */
 .group:hover .group-hover\:opacity-80 {
   opacity: 0.8;
+}
+
+.hover\:opacity-80:hover {
+  opacity: 0.8;
+}
+
+/* 부드러운 스크롤 효과 */
+html {
+  scroll-behavior: smooth;
 }

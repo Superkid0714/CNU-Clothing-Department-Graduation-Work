@@ -1,34 +1,33 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './index.css';
 
-// 컴포넌트 불러오기
-import PreviewPosterPage from './components/PreviewPosterPage';
-import GalleryPage from './pages/GalleryPage';
-import ArtworkDetailPage from './pages/ArtworkDetailPage';
-import NotFoundPage from './pages/NotFoundPage';
-
-// 앱 컴포넌트
-const App = () => {
+const MainPage = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        {/* 홈 페이지 (포스터) */}
-        <Route path="/" element={<PreviewPosterPage />} />
+    <div className="container mx-auto py-16 px-4">
+      <h1 className="text-4xl font-bold text-blue-800 mb-8 text-center">
+        전시 작품 갤러리
+      </h1>
 
-        {/* 작품 갤러리 페이지 */}
-        <Route path="/gallery" element={<GalleryPage />} />
+      <div className="mb-12">
+        <p className="text-lg text-blue-800 opacity-80 text-center max-w-3xl mx-auto mb-8">
+          전남대학교 의류학과 2025 졸업전시 작품들을 감상하실 수 있습니다.
+          개인의 정체성과 겹겹이 쌓인 경험의 층위를 의류라는 형태로 표현한
+          작품들을 만나보세요.
+        </p>
+      </div>
 
-        {/* 작품 상세 페이지 */}
-        <Route path="/artwork/:id" element={<ArtworkDetailPage />} />
-
-        {/* 404 페이지 */}
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-    </BrowserRouter>
+      {/* 임시 갤러리 그리드 */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[1, 2, 3, 4, 5, 6].map((item) => (
+          <div
+            key={item}
+            className="bg-gray-50 h-64 rounded-sm flex items-center justify-center hover:shadow-md transition-all duration-300"
+          >
+            <p className="text-blue-800 font-medium">작품 {item} (개발 중)</p>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 
-// 루트 렌더링
-createRoot(document.getElementById('root')).render(<App />);
+export default MainPage;

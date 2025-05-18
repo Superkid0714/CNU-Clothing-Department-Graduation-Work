@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../previewStyle.css'; // CSS 파일 임포트
 
 const PreviewPosterPage = () => {
   const navigate = useNavigate();
@@ -34,10 +35,7 @@ const PreviewPosterPage = () => {
           </div>
 
           {/* 메인 타이틀 */}
-          <div
-            className="space-y-1 mb-6 animate-fade-in"
-            style={{ animationDelay: '0.2s' }}
-          >
+          <div className="space-y-1 mb-6 animate-fade-in delay-200">
             <h1 className="text-6xl md:text-7xl font-bold text-blue-800 tracking-tight font-display">
               Parergon
             </h1>
@@ -47,10 +45,7 @@ const PreviewPosterPage = () => {
           </div>
 
           {/* 한글 타이틀 */}
-          <div
-            className="space-y-1 mb-16 animate-fade-in"
-            style={{ animationDelay: '0.4s' }}
-          >
+          <div className="space-y-1 mb-16 animate-fade-in delay-400">
             <h3 className="text-2xl md:text-3xl font-medium text-blue-800">
               나를 이루는 외곽선
             </h3>
@@ -60,10 +55,7 @@ const PreviewPosterPage = () => {
           </div>
 
           {/* 설명 텍스트 */}
-          <div
-            className="mb-16 text-lg md:text-xl leading-relaxed text-blue-800 opacity-80 max-w-2xl mx-auto animate-slide-up"
-            style={{ animationDelay: '0.6s' }}
-          >
+          <div className="mb-16 text-lg md:text-xl leading-relaxed text-blue-800 opacity-80 max-w-2xl mx-auto animate-slide-up delay-600">
             <p className="mb-4">우리는 하나의 선으로 정의되지 않는다.</p>
             <p className="mb-4">
               감정의 여운, 타인의 시선, 흘러간 기억들—그 모든 것이 겹겹이 쌓여
@@ -84,10 +76,7 @@ const PreviewPosterPage = () => {
           </div>
 
           {/* 전시 정보 */}
-          <div
-            className="mb-12 text-lg md:text-xl text-blue-800 opacity-90 animate-slide-up"
-            style={{ animationDelay: '0.8s' }}
-          >
+          <div className="mb-12 text-lg md:text-xl text-blue-800 opacity-90 animate-slide-up delay-800">
             <p className="mb-1">Launch Event 6/11 3PM</p>
             <p className="mb-1">Exhibition Period 6/11-17 5PM</p>
             <p className="mb-1">Location: Chonnam National University</p>
@@ -95,10 +84,7 @@ const PreviewPosterPage = () => {
           </div>
 
           {/* 작품 보기 버튼 */}
-          <div
-            className="flex justify-center animate-slide-up"
-            style={{ animationDelay: '1s' }}
-          >
+          <div className="flex justify-center animate-slide-up delay-1000">
             <button
               onClick={() => navigate('/main')}
               className="group inline-flex flex-col items-center transition-all duration-300 hover:opacity-80"

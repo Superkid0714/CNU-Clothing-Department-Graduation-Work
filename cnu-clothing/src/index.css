@@ -1,8 +1,8 @@
-@import 'tailwindcss/preflight';
-@tailwind utilities;
-
 /* 웹폰트 임포트 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Spectral:wght@400;500;600;700&display=swap');
+
+@import 'tailwindcss/preflight';
+@tailwind utilities;
 
 /* 루트 변수 */
 :root {
