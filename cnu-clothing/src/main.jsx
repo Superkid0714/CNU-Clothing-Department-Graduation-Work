@@ -1,35 +1,41 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import './index.css';
 
 // 컴포넌트 불러오기
 import PreviewPosterPage from './components/PreviewPosterPage';
+import MainPage from './pages/MainPage';
+import AboutPage from './pages/AboutPage';
+import ArtistsPage from './pages/ArtistsPage';
+import SchedulePage from './pages/SchedulePage';
+import LocationPage from './pages/LocationPage';
+import NotFoundPage from './pages/NotFoundPage';
+import Layout from './components/Layout';
 
-// 임시 MainPage 컴포넌트
-const MainPage = () => {
+// 앱 컴포넌트
+const App = () => {
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-white">
-      <h1 className="text-4xl font-bold mb-4 text-blue-800">
-        전시 메인 페이지
-      </h1>
-      <p className="text-gray-600 mb-8">이 페이지는 아직 개발 중입니다.</p>
-      <a
-        href="/"
-        className="px-6 py-2 bg-blue-800 text-white hover:bg-blue-700 transition"
-      >
-        돌아가기
-      </a>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {/* 홈 페이지 (포스터) */}
+        <Route path="/" element={<PreviewPosterPage />} />
+
+        {/* 메인 레이아웃으로 감싸진 페이지들 */}
+        <Route path="/" element={<Layout />}>
+          <Route path="main" element={<MainPage />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="artists" element={<ArtistsPage />} />
+          <Route path="schedule" element={<SchedulePage />} />
+          <Route path="location" element={<LocationPage />} />
+        </Route>
+
+        {/* 404 페이지 */}
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
 // 루트 렌더링
-createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<PreviewPosterPage />} />
-      <Route path="/main" element={<MainPage />} />
-    </Routes>
-  </BrowserRouter>
-);
+createRoot(document.getElementById('root')).render(<App />);
