@@ -39,7 +39,7 @@ const PreviewPosterPage = () => {
           </div>
 
           {/* 한글 타이틀 + 부제 */}
-          <div className="mb-16 animate-fade-in delay-400 text-blue-800 space-y-4">
+          <div className="mb-16 animate-fade-in delay-400 text-blue-800 space-y-6 md:space-y-10">
             <div className="space-y-1">
               <h3 className="text-2xl md:text-3xl font-medium">
                 나를 이루는 외곽선
@@ -48,9 +48,6 @@ const PreviewPosterPage = () => {
                 그 안의 이야기들
               </h3>
             </div>
-            <p className="mt-6 text-sm md:text-base opacity-80">
-              우리는 하나의 선으로 정의되지 않는다.
-            </p>
           </div>
 
           {/* 설명 텍스트 */}
