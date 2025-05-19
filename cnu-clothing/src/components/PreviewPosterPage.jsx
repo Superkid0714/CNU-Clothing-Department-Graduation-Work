@@ -14,8 +14,13 @@ const PreviewPosterPage = () => {
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
+      {/* 상단 여백: 모바일 48px, 데스크탑 64px */}
+      <div className="w-full h-12 md:h-16"></div>
+
       <div
-        className={`flex-1 flex flex-col justify-center items-center px-6 transition-all duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+        className={`w-full flex flex-col items-center px-6 transition-all duration-1000 ${
+          isLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
       >
         <div className="max-w-3xl mx-auto text-center">
           {/* 상단 텍스트 */}
@@ -38,7 +43,7 @@ const PreviewPosterPage = () => {
             </h1>
           </div>
 
-          {/* 한글 타이틀 + 부제 - 별도 섹션으로 분리 */}
+          {/* 한글 타이틀 + 부제 */}
           <div className="animate-fade-in delay-400 text-blue-800 mb-8">
             <div className="space-y-8 md:space-y-10">
               <h3 className="text-2xl md:text-3xl font-medium">
@@ -53,7 +58,7 @@ const PreviewPosterPage = () => {
           {/* 간격용 빈 div */}
           <div className="h-24 md:h-32 lg:h-40"></div>
 
-          {/* 설명 텍스트 부분 - 별도 섹션으로 분리 */}
+          {/* 설명 텍스트 */}
           <div className="mb-16 text-[13px] xs:text-[14px] sm:text-xs md:text-sm lg:text-base leading-relaxed text-blue-800 opacity-80 max-w-2xl mx-auto animate-slide-up delay-600">
             <p className="mb-8">우리는 하나의 선으로 정의되지 않는다.</p>
             <p className="mb-4">
@@ -83,7 +88,7 @@ const PreviewPosterPage = () => {
             </p>
           </div>
 
-          {/* 전시 정보 - 인라인 텍스트 크기 적용 */}
+          {/* 전시 정보 */}
           <div className="mb-12 text-[13px] xs:text-[14px] sm:text-xs md:text-sm lg:text-base text-blue-800 opacity-90 animate-slide-up delay-800">
             <p className="mb-1">Launch Event | June 11 (Tue) 3:00 PM</p>
             <p className="mb-1">Exhibition Period | June 11 – 17, 5:00 PM</p>

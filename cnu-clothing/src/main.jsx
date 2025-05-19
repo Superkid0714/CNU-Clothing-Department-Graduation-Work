@@ -6,6 +6,7 @@ import './previewStyle.css';
 
 // 컴포넌트 불러오기
 import PreviewPosterPage from './components/PreviewPosterPage';
+import MainPage from './pages/MainPage';
 
 // 앱 컴포넌트
 const App = () => {
@@ -14,7 +15,24 @@ const App = () => {
       <Routes>
         {/* 홈 페이지 (포스터) */}
         <Route path="/" element={<PreviewPosterPage />} />
-        {/* 다른 페이지들은 나중에 추가 */}
+        {/* 메인 페이지 */}
+        <Route path="/main" element={<MainPage />} />
+        {/* 아티스트 페이지 - 임시 경로 설정 */}
+        <Route
+          path="/artist/:id"
+          element={
+            <div className="p-12 text-center">
+              아티스트 상세 페이지 (개발 중)
+            </div>
+          }
+        />
+        {/* 404 페이지 - 모든 경로에 매치되지 않는 경우 */}
+        <Route
+          path="*"
+          element={
+            <div className="p-12 text-center">페이지를 찾을 수 없습니다.</div>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );
