@@ -29,7 +29,7 @@ const PreviewPosterPage = () => {
           </div>
 
           {/* 메인 타이틀 */}
-          <div className="space-y-1 mb-6 animate-fade-in delay-200">
+          <div className="space-y-1 mb-10 animate-fade-in delay-200">
             <h1 className="text-6xl md:text-7xl font-bold text-blue-800 tracking-tight font-display">
               Parergon
             </h1>
