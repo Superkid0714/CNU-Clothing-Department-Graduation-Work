@@ -1,122 +1,134 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../previewStyle.css';
 
-const Layout = () => {
+const PreviewPosterPage = () => {
+  const navigate = useNavigate();
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    document.title = 'Parergon: Layered Being - CNU 2025 Graduation Show';
+    window.scrollTo(0, 0);
+    setTimeout(() => setIsLoaded(true), 300);
+  }, []);
+
   return (
-    <div className="min-h-screen flex flex-col bg-white">
-      {/* 상단 장식 */}
-      <div className="h-1 bg-gradient-to-r from-blue-800 to-blue-600"></div>
-
-      {/* 헤더 */}
-      <header className="py-4 bg-white shadow-sm">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="flex justify-between items-center">
-            {/* 로고 */}
-            <div>
-              <a
-                href="/main"
-                className="text-xl font-bold text-blue-800 hover:text-blue-700 transition-colors duration-200"
-              >
-                Parergon: Layered Being
-              </a>
-              <p className="text-sm text-blue-800 opacity-70">
-                CNU Clothing & Textiles 2025 Graduation Show
-              </p>
-            </div>
-
-            {/* 내비게이션 */}
-            <nav className="flex items-center space-x-6">
-              <a
-                href="/main"
-                className="relative font-medium text-blue-800 transition-colors duration-200"
-              >
-                Home
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-800 rounded-full"></span>
-              </a>
-            </nav>
+    <div className="min-h-screen bg-white flex flex-col">
+      <div
+        className={`flex-1 flex flex-col justify-center items-center px-6 transition-all duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+      >
+        <div className="max-w-3xl mx-auto text-center">
+          {/* 상단 텍스트 */}
+          <div className="mb-8 animate-fade-in">
+            <h2 className="text-xl md:text-2xl font-medium text-blue-800">
+              CNU Clothing & Textiles
+            </h2>
+            <h3 className="text-lg md:text-xl font-medium text-blue-800">
+              2025 Graduation Show
+            </h3>
           </div>
-        </div>
-      </header>
 
-      {/* 메인 콘텐츠 */}
-      <main className="flex-1">
-        <Outlet />
-      </main>
+          {/* 메인 타이틀 */}
+          <div className="space-y-1 mb-10 animate-fade-in delay-200">
+            <h1 className="text-6xl md:text-7xl font-bold text-blue-800 tracking-tight font-display">
+              Parergon
+            </h1>
+            <h1 className="text-6xl md:text-7xl font-bold text-blue-800 tracking-tight font-display">
+              Layered Being
+            </h1>
+          </div>
 
-      {/* 푸터 */}
-      <footer className="py-8 bg-blue-800 text-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* 컬럼 1: 소개 */}
-            <div>
-              <h3 className="text-lg font-bold mb-4">
-                Parergon: Layered Being
+          {/* 한글 타이틀 섹션 */}
+          <section className="animate-fade-in delay-400 text-blue-800">
+            <div className="space-y-8 md:space-y-10">
+              <h3 className="text-2xl md:text-3xl font-medium">
+                나를 이루는 외곽선
               </h3>
-              <p className="text-sm opacity-80 mb-4">
-                전남대학교 의류학과 2025년 졸업작품전은 개인의 정체성과 겹겹이
-                쌓인 경험의 층위를 탐구합니다.
-              </p>
+              <h3 className="text-2xl md:text-3xl font-medium">
+                그 안의 이야기들
+              </h3>
             </div>
+          </section>
+          
+          {/* 명시적 간격 div - 매우 큰 간격 적용 */}
+          <div style={{ height: '150px' }} className="w-full block"></div>
 
-            {/* 컬럼 2: 링크 */}
-            <div>
-              <h3 className="text-lg font-bold mb-4">Links</h3>
-              <ul className="space-y-2 text-sm opacity-80">
-                <li>
-                  <a
-                    href="https://jnu.ac.kr"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-blue-200 transition-colors duration-200"
-                  >
-                    전남대학교
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://jnu.ac.kr/dept/clothing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-blue-200 transition-colors duration-200"
-                  >
-                    전남대학교 의류학과
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.instagram.com/cnu_clothing/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-blue-200 transition-colors duration-200"
-                  >
-                    Instagram
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* 컬럼 3: 연락처 */}
-            <div>
-              <h3 className="text-lg font-bold mb-4">Contact</h3>
-              <address className="not-italic text-sm opacity-80 space-y-2">
-                <p>전라남도 광주시 북구 용봉로 77</p>
-                <p>전남대학교 의류학과</p>
-                <p>Email: clothing@jnu.ac.kr</p>
-                <p>Tel: +82-62-530-1340</p>
-              </address>
-            </div>
-          </div>
-
-          <div className="mt-8 pt-8 border-t border-blue-700 text-center text-sm opacity-70">
-            <p>
-              © 2025 Chonnam National University Clothing & Textiles
-              Department. All rights reserved.
+          {/* 설명 텍스트 섹션 - 완전히 별도 섹션으로 분리 */}
+          <section className="block w-full mb-16 text-[7px] xs:text-[8px] sm:text-xs md:text-sm lg:text-base leading-relaxed text-blue-800 opacity-80 max-w-2xl mx-auto animate-slide-up delay-600">
+            <p className="mb-8">우리는 하나의 선으로 정의되지 않는다.</p>
+            <p className="mb-4">
+              감정의 여운, 타인의 시선, 흘러간 기억들
+              <br />그 모든 것이 겹겹이 쌓여 지금의 &lsquo;나&rsquo;를 이룬다.
+            </p>
+            <p className="mb-4">
+              이 전시는 그러한 겹들을
+              <br />
+              의류라는 형태로 풀어낸 기록물이다.
+            </p>
+            <p className="mb-4">
+              옷은 단지 나를 가리는 외피를 넘어
+              <br />
+              내 안에 남은 감정, 나를 바라보는 시선,
+              <br />
+              잊히지 않는 기억들이 쌓여
+              <br />
+              만들어진 나만의 언어이자
+              <br />
+              작품을 인식할 수 있는 액자의 역할을 한다.
+            </p>
+            <p className="mb-4">
+              작품을 통해 우리는 나를 감싸고 있던 것들과 마주하게 된다.
+              <br />그 겹들을 하나씩 들춰보며 진짜 &lsquo;나&rsquo;를 찾아가는
+              여정을 떠난다.
             </p>
           </div>
+
+          {/* 전시 정보 - 인라인 텍스트 크기 적용 */}
+          <div className="mb-12 text-[7px] xs:text-[8px] sm:text-xs md:text-sm lg:text-base text-blue-800 opacity-90 animate-slide-up delay-800">
+            <p className="mb-1">Launch Event | June 11 (Tue) 3:00 PM</p>
+            <p className="mb-1">Exhibition Period | June 11 – 17, 5:00 PM</p>
+            <p className="mb-1">
+              Location | Chonnam National University Convention Hall
+            </p>
+          </div>
+
+          {/* 작품 보기 버튼 */}
+          <div className="flex justify-center animate-slide-up delay-1000">
+            <button
+              onClick={() => navigate('/main')}
+              className="group inline-flex flex-col items-center transition-all duration-300 hover:opacity-80"
+              aria-label="View Exhibition"
+            >
+              <span className="text-lg text-blue-800 mb-3 font-medium">
+                작품 보기
+              </span>
+              <svg
+                className="w-12 h-12 text-blue-800 animate-bounce -rotate-90"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                ></path>
+              </svg>
+            </button>
+          </div>
         </div>
+      </div>
+
+      {/* 푸터 */}
+      <footer className="py-4 text-center text-[11px] sm:text-sm md:text-base text-blue-800 opacity-70">
+        <p>
+          © 2025 Chonnam National University Clothing & Textiles Department
+        </p>
       </footer>
     </div>
   );
 };
 
-export default Layout;
+export default PreviewPosterPage;

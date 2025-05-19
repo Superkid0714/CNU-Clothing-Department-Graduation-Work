@@ -38,9 +38,9 @@ const PreviewPosterPage = () => {
             </h1>
           </div>
 
-          {/* 한글 타이틀 + 부제 */}
-          <div className="mb-16 animate-fade-in delay-400 text-blue-800 space-y-6 md:space-y-10">
-            <div className="space-y-1">
+          {/* 한글 타이틀 + 부제 - 별도 섹션으로 분리 */}
+          <div className="animate-fade-in delay-400 text-blue-800 mb-8">
+            <div className="space-y-8 md:space-y-10">
               <h3 className="text-2xl md:text-3xl font-medium">
                 나를 이루는 외곽선
               </h3>
@@ -50,9 +50,12 @@ const PreviewPosterPage = () => {
             </div>
           </div>
 
-          {/* 설명 텍스트 */}
-          <div className="mb-16 text-[13px] md:text-xl leading-relaxed text-blue-800 opacity-80 max-w-2xl mx-auto animate-slide-up delay-600">
-            <p className="mb-4">우리는 하나의 선으로 정의되지 않는다.</p>
+          {/* 간격용 빈 div */}
+          <div className="h-24 md:h-32 lg:h-40"></div>
+
+          {/* 설명 텍스트 부분 - 별도 섹션으로 분리 */}
+          <div className="mb-16 text-[13px] xs:text-[14px] sm:text-xs md:text-sm lg:text-base leading-relaxed text-blue-800 opacity-80 max-w-2xl mx-auto animate-slide-up delay-600">
+            <p className="mb-8">우리는 하나의 선으로 정의되지 않는다.</p>
             <p className="mb-4">
               감정의 여운, 타인의 시선, 흘러간 기억들
               <br />그 모든 것이 겹겹이 쌓여 지금의 &lsquo;나&rsquo;를 이룬다.
@@ -80,8 +83,8 @@ const PreviewPosterPage = () => {
             </p>
           </div>
 
-          {/* 전시 정보 */}
-          <div className="mb-12 text-[12px] sm:text-base md:text-lg text-blue-800 opacity-90 animate-slide-up delay-800">
+          {/* 전시 정보 - 인라인 텍스트 크기 적용 */}
+          <div className="mb-12 text-[13px] xs:text-[14px] sm:text-xs md:text-sm lg:text-base text-blue-800 opacity-90 animate-slide-up delay-800">
             <p className="mb-1">Launch Event | June 11 (Tue) 3:00 PM</p>
             <p className="mb-1">Exhibition Period | June 11 – 17, 5:00 PM</p>
             <p className="mb-1">
