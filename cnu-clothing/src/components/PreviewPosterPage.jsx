@@ -1,20 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../previewStyle.css'; // CSS 파일 임포트
+import '../previewStyle.css';
 
 const PreviewPosterPage = () => {
   const navigate = useNavigate();
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // 페이지 로드 시 실행될 효과
   useEffect(() => {
-    // 타이틀 설정
     document.title = 'Parergon: Layered Being - CNU 2025 Graduation Show';
-
-    // 스크롤 최상단으로 이동
     window.scrollTo(0, 0);
-
-    // 로딩 효과
     setTimeout(() => setIsLoaded(true), 300);
   }, []);
 
@@ -44,43 +38,58 @@ const PreviewPosterPage = () => {
             </h1>
           </div>
 
-          {/* 한글 타이틀 */}
-          <div className="space-y-1 mb-16 animate-fade-in delay-400">
-            <h3 className="text-2xl md:text-3xl font-medium text-blue-800">
-              나를 이루는 외곽선
-            </h3>
-            <h3 className="text-2xl md:text-3xl font-medium text-blue-800">
-              그 안의 이야기들
-            </h3>
+          {/* 한글 타이틀 + 부제 */}
+          <div className="mb-16 animate-fade-in delay-400 text-blue-800 space-y-4">
+            <div className="space-y-1">
+              <h3 className="text-2xl md:text-3xl font-medium">
+                나를 이루는 외곽선
+              </h3>
+              <h3 className="text-2xl md:text-3xl font-medium">
+                그 안의 이야기들
+              </h3>
+            </div>
+            <p className="mt-6 text-sm md:text-base opacity-80">
+              우리는 하나의 선으로 정의되지 않는다.
+            </p>
           </div>
 
           {/* 설명 텍스트 */}
-          <div className="mb-16 text-lg md:text-xl leading-relaxed text-blue-800 opacity-80 max-w-2xl mx-auto animate-slide-up delay-600">
+          <div className="mb-16 text-[13px] md:text-xl leading-relaxed text-blue-800 opacity-80 max-w-2xl mx-auto animate-slide-up delay-600">
             <p className="mb-4">우리는 하나의 선으로 정의되지 않는다.</p>
             <p className="mb-4">
-              감정의 여운, 타인의 시선, 흘러간 기억들—그 모든 것이 겹겹이 쌓여
-              지금의 '나'를 이룬다.
+              감정의 여운, 타인의 시선, 흘러간 기억들
+              <br />그 모든 것이 겹겹이 쌓여 지금의 &lsquo;나&rsquo;를 이룬다.
             </p>
             <p className="mb-4">
-              이 전시는 그러한 겹들을 의류라는 형태로 풀어낸 기록물이다.
+              이 전시는 그러한 겹들을
+              <br />
+              의류라는 형태로 풀어낸 기록물이다.
             </p>
             <p className="mb-4">
-              옷은 단지 나를 가리는 외피를 넘어 내 안에 남은 감정, 나를 바라보는
-              시선, 잊히지 않는 기억들이 쌓여 만들어진 나만의 언어이자 작품을
-              인식할 수 있는 액자의 역할을 한다.
+              옷은 단지 나를 가리는 외피를 넘어
+              <br />
+              내 안에 남은 감정, 나를 바라보는 시선,
+              <br />
+              잊히지 않는 기억들이 쌓여
+              <br />
+              만들어진 나만의 언어이자
+              <br />
+              작품을 인식할 수 있는 액자의 역할을 한다.
             </p>
-            <p>
-              작품을 통해 우리는 나를 감싸고 있던 것들과 마주하게 된다. 그
-              겹들을 하나씩 들춰보며 진짜 '나'를 찾아가는 여정을 떠난다.
+            <p className="mb-4">
+              작품을 통해 우리는 나를 감싸고 있던 것들과 마주하게 된다.
+              <br />그 겹들을 하나씩 들춰보며 진짜 &lsquo;나&rsquo;를 찾아가는
+              여정을 떠난다.
             </p>
           </div>
 
           {/* 전시 정보 */}
-          <div className="mb-12 text-lg md:text-xl text-blue-800 opacity-90 animate-slide-up delay-800">
-            <p className="mb-1">Launch Event 6/11 3PM</p>
-            <p className="mb-1">Exhibition Period 6/11-17 5PM</p>
-            <p className="mb-1">Location: Chonnam National University</p>
-            <p>Convention Hall</p>
+          <div className="mb-12 text-[12px] sm:text-base md:text-lg text-blue-800 opacity-90 animate-slide-up delay-800">
+            <p className="mb-1">Launch Event | June 11 (Tue) 3:00 PM</p>
+            <p className="mb-1">Exhibition Period | June 11 – 17, 5:00 PM</p>
+            <p className="mb-1">
+              Location | Chonnam National University Convention Hall
+            </p>
           </div>
 
           {/* 작품 보기 버튼 */}
@@ -94,7 +103,7 @@ const PreviewPosterPage = () => {
                 작품 보기
               </span>
               <svg
-                className="w-12 h-12 text-blue-800 animate-bounce"
+                className="w-12 h-12 text-blue-800 animate-bounce -rotate-90"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -113,7 +122,7 @@ const PreviewPosterPage = () => {
       </div>
 
       {/* 푸터 */}
-      <footer className="py-4 text-center text-sm text-blue-800 opacity-70">
+      <footer className="py-4 text-center text-[11px] sm:text-sm md:text-base text-blue-800 opacity-70">
         <p>
           © 2025 Chonnam National University Clothing & Textiles Department
         </p>

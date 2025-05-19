@@ -1,15 +1,18 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      fontSize: {
+        xxs: '7px',
+      },
       fontFamily: {
         sans: ['"Noto Sans KR"', 'sans-serif'],
         display: ['Spectral', 'serif'],
       },
       colors: {
         'primary-blue': {
-          900: '#0d4c93', // 가장 진한 색
+          900: '#0d4c93',
           800: '#1a5da3',
           700: '#2470c9',
           600: '#3183e4',
@@ -18,7 +21,7 @@ export default {
           300: '#93c5fd',
           200: '#bfdbfe',
           100: '#dbeafe',
-          50: '#f0f9ff', // 가장 밝은 색
+          50: '#f0f9ff',
         },
       },
       animation: {
