@@ -59,7 +59,7 @@ const PreviewPosterPage = () => {
           <div className="h-24 md:h-32 lg:h-40"></div>
 
           {/* 설명 텍스트 */}
-          <div className="mb-16 text-[13px] xs:text-[14px] sm:text-xs md:text-sm lg:text-base leading-relaxed text-blue-800 opacity-80 max-w-2xl mx-auto animate-slide-up delay-600">
+          <div className="mb-16 text-[12px] sm:text-xs md:text-sm lg:text-base leading-relaxed text-blue-800 opacity-80 max-w-2xl mx-auto animate-slide-up delay-600">
             <p className="mb-8">우리는 하나의 선으로 정의되지 않는다.</p>
             <p className="mb-4">
               감정의 여운, 타인의 시선, 흘러간 기억들
