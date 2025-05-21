@@ -21,9 +21,10 @@ const Header = () => {
           </Link>
 
           {/* 네비게이션 메뉴: 타이틀과 같은 컨테이너 내에! */}
-          <nav className="flex space-x-20 md:space-x-28 lg:space-x-32 mb-20 text-xl font-medium">
+          <nav className="flex mb-20 text-xl font-medium">
             <Link
               to="/archive"
+              style={{ marginRight: '3rem' }} // 직접 마진 값 지정
               className={`relative ${
                 location.pathname === '/archive'
                   ? 'text-blue-800 font-semibold'
