@@ -5,7 +5,7 @@ import './index.css';
 import './previewStyle.css';
 
 // 컴포넌트 불러오기
-import PreviewPosterPage from './components/PreviewPosterPage';
+import PreviewPosterPage from './pages/PreviewPosterPage';
 import MainPage from './pages/MainPage';
 
 // 앱 컴포넌트
