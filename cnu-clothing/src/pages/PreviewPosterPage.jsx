@@ -55,11 +55,8 @@ const PreviewPosterPage = () => {
             </div>
           </div>
 
-          {/* 간격용 빈 div */}
-          <div className="h-24 md:h-32 lg:h-40"></div>
-
           {/* 설명 텍스트 */}
-          <div className="mb-16 text-[12px] sm:text-xs md:text-sm lg:text-base leading-relaxed text-blue-800 opacity-80 max-w-2xl mx-auto animate-slide-up delay-600">
+          <div className="mb-16 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed text-blue-800 opacity-80 max-w-2xl mx-auto animate-slide-up delay-600">
             <p className="mb-8">우리는 하나의 선으로 정의되지 않는다.</p>
             <p className="mb-4">
               감정의 여운, 타인의 시선, 흘러간 기억들
@@ -89,7 +86,7 @@ const PreviewPosterPage = () => {
           </div>
 
           {/* 전시 정보 */}
-          <div className="mb-12 text-[13px] xs:text-[14px] sm:text-xs md:text-sm lg:text-base text-blue-800 opacity-90 animate-slide-up delay-800">
+          <div className="mb-12 text-sm md:text-base lg:text-lg text-blue-800 opacity-90 animate-slide-up delay-800">
             <p className="mb-1">Launch Event | June 11 (Tue) 3:00 PM</p>
             <p className="mb-1">Exhibition Period | June 11 – 17, 5:00 PM</p>
             <p className="mb-1">
@@ -108,7 +105,7 @@ const PreviewPosterPage = () => {
                 작품 보기
               </span>
               <svg
-                className="w-12 h-12 text-blue-800 animate-bounce -rotate-90"
+                className="w-12 h-12 text-blue-800 animate-bounce"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -118,7 +115,7 @@ const PreviewPosterPage = () => {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
                 ></path>
               </svg>
             </button>
@@ -127,7 +124,7 @@ const PreviewPosterPage = () => {
       </div>
 
       {/* 푸터 */}
-      <footer className="py-4 text-center text-[11px] sm:text-sm md:text-base text-blue-800 opacity-70">
+      <footer className="py-4 text-center text-xs sm:text-sm md:text-base text-blue-800 opacity-70">
         <p>
           © 2025 Chonnam National University Clothing & Textiles Department
         </p>
