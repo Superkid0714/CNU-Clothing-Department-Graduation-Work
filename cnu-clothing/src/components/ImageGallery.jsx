@@ -7,15 +7,8 @@ const ImageGallery = ({ works = [], category }) => {
   const [isMobile, setIsMobile] = useState(false);
   const navigate = useNavigate();
 
-  // 작품 클릭 시 상세 페이지로 이동
-  const handleWorkClick = (work) => {
-    if (category) {
-      navigate(`/archive/${category}/${work.id}`);
-    } else {
-      // category가 없으면 모달 열기 (기존 방식)
-      openModal(work);
-    }
-  };
+  // 화면 크기 감지
+  useEffect(() => {
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth < 768);
     };
@@ -25,8 +18,16 @@ const ImageGallery = ({ works = [], category }) => {
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
 
-  // 화면 크기 감지
-  useEffect(() => {
+  // 작품 클릭 시 상세 페이지로 이동
+  const handleWorkClick = (work) => {
+    if (category) {
+      navigate(`/archive/${category}/${work.id}`);
+    } else {
+      // category가 없으면 모달 열기 (기존 방식)
+      openModal(work);
+    }
+  };
+
   const openModal = (work) => {
     setSelectedImage(work);
     // 모바일에서 스크롤 방지
@@ -47,12 +48,26 @@ const ImageGallery = ({ works = [], category }) => {
     return (
       <div className="text-center py-12 px-4">
         <div className="inline-flex items-center justify-center w-16 h-16 md:w-24 md:h-24 bg-blue-100 rounded-full mb-4 md:mb-6">
-          <svg className="w-8 h-8 md:w-12 md:h-12 text-blue-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          <svg
+            className="w-8 h-8 md:w-12 md:h-12 text-blue-800"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+            ></path>
           </svg>
         </div>
-        <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-2 md:mb-4">작품을 준비 중입니다</h3>
-        <p className="text-sm md:text-base text-gray-600">작품들이 곧 업데이트될 예정입니다.</p>
+        <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-2 md:mb-4">
+          작품을 준비 중입니다
+        </h3>
+        <p className="text-sm md:text-base text-gray-600">
+          작품들이 곧 업데이트될 예정입니다.
+        </p>
       </div>
     );
   }
@@ -62,7 +77,7 @@ const ImageGallery = ({ works = [], category }) => {
       {/* 갤러리 그리드 - 모바일 2개, 데스크탑 4개 */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 lg:gap-6">
         {works.map((work) => (
-          <div 
+          <div
             key={work.id}
             className="group cursor-pointer bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 md:hover:-translate-y-2"
             onClick={() => handleWorkClick(work)}
@@ -74,16 +89,32 @@ const ImageGallery = ({ works = [], category }) => {
                 alt={work.title || '작품 이미지'}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 onError={(e) => {
-                  e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPuydtOuvuOyngCDspJXsnpE8L3RleHQ+PC9zdmc+';
+                  e.target.src =
+                    'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPuydtOuvuOyngCDspJXsnpE8L3RleHQ+PC9zdmc+';
                 }}
               />
-              
+
               {/* 호버 오버레이 - 모바일에서 터치 피드백 */}
               <div className="absolute inset-0 bg-blue-800 bg-opacity-0 group-hover:bg-opacity-20 group-active:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                 <div className="text-white opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300">
-                  <svg className="w-8 h-8 md:w-12 md:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                  <svg
+                    className="w-8 h-8 md:w-12 md:h-12"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    ></path>
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                    ></path>
                   </svg>
                 </div>
               </div>
@@ -109,7 +140,7 @@ const ImageGallery = ({ works = [], category }) => {
 
       {/* 모달 - 모바일 최적화 */}
       {selectedImage && (
-        <div 
+        <div
           className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-2 md:p-4"
           onClick={closeModal}
         >
@@ -119,8 +150,18 @@ const ImageGallery = ({ works = [], category }) => {
               onClick={closeModal}
               className="absolute top-2 right-2 md:-top-10 md:right-0 z-10 p-2 md:p-0 text-white hover:text-gray-300 transition-colors bg-black bg-opacity-50 md:bg-transparent rounded-full md:rounded-none"
             >
-              <svg className="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+              <svg
+                className="w-6 h-6 md:w-8 md:h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
               </svg>
             </button>
 
