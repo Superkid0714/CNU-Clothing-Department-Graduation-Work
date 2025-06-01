@@ -7,12 +7,11 @@ const Header = () => {
   const timeoutRef = useRef(null);
 
   const archiveCategories = [
-    '패션디자인',
-    '미디어제작',
     '클로',
-    '패션마케팅',
     '전통복식',
-    '논문',
+    '작품',
+    '미디어제작',
+    '패션마케팅',
   ];
 
   const handleMouseEnter = () => {
@@ -30,9 +29,6 @@ const Header = () => {
 
   return (
     <>
-      {/* 상단 검은 배경 */}
-      <div className="h-12 bg-gray-800 w-full"></div>
-
       {/* 헤더 전체에 동일한 패딩 */}
       <header className="px-6 md:px-16 lg:px-24 pt-16">
         <div className="container mx-auto">
