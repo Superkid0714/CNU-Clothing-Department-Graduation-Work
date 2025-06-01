@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const WorkDetailPage = ({ category }) => {
   const { workId } = useParams();
@@ -198,6 +199,8 @@ const WorkDetailPage = ({ category }) => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

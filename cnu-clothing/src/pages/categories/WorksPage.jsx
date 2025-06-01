@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import ImageGallery from '../../components/ImageGallery';
 
 const WorksPage = () => {
+  // 페이지 진입 시 스크롤을 맨 위로 이동
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }, []);
+
   // 작품 데이터 (실제 이미지 경로로 수정하세요)
   const works = [
     {
@@ -70,6 +78,8 @@ const WorksPage = () => {
           )}
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

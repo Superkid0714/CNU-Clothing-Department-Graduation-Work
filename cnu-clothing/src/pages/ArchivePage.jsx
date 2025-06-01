@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 
 const ArchivePage = () => {
+  // 페이지 진입 시 스크롤을 맨 위로 이동
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }, []);
+
   const categories = [
     {
       name: '클로',
@@ -89,6 +97,8 @@ const ArchivePage = () => {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

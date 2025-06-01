@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import ImageGallery from '../../components/ImageGallery';
 
 const ClothingPage = () => {
-  // 클로 작품 데이터 (실제 이미지 경로로 수정하세요)
+  // 페이지 진입 시 스크롤을 맨 위로 이동
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }, []);
+
+  // 클로 작품 데이터
   const clothingWorks = [
     {
       id: 1,
-      title: '클로 작품 1',
-      artist: '김민주',
-      image: '/images/clothing/work1.jpg', // 실제 파일명으로 교체
-      description: '클로 작품에 대한 설명입니다.',
+      title: 'Phoenix Veil',
+      artist: '배소진',
+      image: 'public/clothing/1_main.jpg',
     },
     {
       id: 2,
@@ -26,7 +33,6 @@ const ClothingPage = () => {
       image: '/images/clothing/work3.jpg', // 실제 파일명으로 교체
       description: '클로 작품에 대한 설명입니다.',
     },
-    // 더 많은 작품들을 추가하세요
   ];
 
   return (
@@ -77,6 +83,8 @@ const ClothingPage = () => {
           )}
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

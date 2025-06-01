@@ -62,16 +62,8 @@ const App = () => {
           element={<WorkDetailPage category="fashion-marketing" />}
         />
 
-        {/* 아티스트 페이지들 */}
+        {/* 아티스트 페이지 */}
         <Route path="/artists" element={<ArtistsPage />} />
-        <Route
-          path="/artist/:id"
-          element={
-            <div className="p-12 text-center">
-              아티스트 상세 페이지 (개발 중)
-            </div>
-          }
-        />
 
         {/* 404 페이지 */}
         <Route
