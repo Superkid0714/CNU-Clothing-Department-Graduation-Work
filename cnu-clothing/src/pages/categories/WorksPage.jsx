@@ -2,22 +2,22 @@ import React from 'react';
 import Header from '../../components/Header';
 import ImageGallery from '../../components/ImageGallery';
 
-const TraditionalPage = () => {
-  // 전통복식 작품 데이터 (실제 이미지 경로로 수정하세요)
-  const traditionalWorks = [
+const WorksPage = () => {
+  // 작품 데이터 (실제 이미지 경로로 수정하세요)
+  const works = [
     {
       id: 1,
-      title: '전통복식 작품 1',
+      title: '작품 1',
       artist: '학생명 1',
-      image: '/images/traditional/work1.jpg', // 실제 파일명으로 교체
-      description: '전통복식 작품에 대한 설명입니다.',
+      image: '/images/works/work1.jpg', // 실제 파일명으로 교체
+      description: '작품에 대한 설명입니다.',
     },
     {
       id: 2,
-      title: '전통복식 작품 2',
+      title: '작품 2',
       artist: '학생명 2',
-      image: '/images/traditional/work2.jpg', // 실제 파일명으로 교체
-      description: '전통복식 작품에 대한 설명입니다.',
+      image: '/images/works/work2.jpg', // 실제 파일명으로 교체
+      description: '작품에 대한 설명입니다.',
     },
     // 더 많은 작품들을 추가하세요
   ];
@@ -30,11 +30,10 @@ const TraditionalPage = () => {
       <div className="px-6 md:px-16 lg:px-24 pb-8">
         <div className="container mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4">
-            전통복식
+            작품
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl">
-            우리나라 전통 복식의 아름다움을 현대적으로 재해석한 작품들을
-            만나보세요.
+            다양한 창작 작품들을 만나보세요.
           </p>
         </div>
       </div>
@@ -42,8 +41,8 @@ const TraditionalPage = () => {
       {/* 작품 갤러리 */}
       <div className="px-6 md:px-16 lg:px-24 pb-16">
         <div className="container mx-auto">
-          {traditionalWorks.length > 0 ? (
-            <ImageGallery works={traditionalWorks} category="traditional" />
+          {works.length > 0 ? (
+            <ImageGallery works={works} category="works" />
           ) : (
             <div className="text-center py-20">
               <div className="inline-flex items-center justify-center w-24 h-24 bg-blue-100 rounded-full mb-6">
@@ -65,7 +64,7 @@ const TraditionalPage = () => {
                 작품을 준비 중입니다
               </h3>
               <p className="text-gray-600">
-                전통복식 작품들이 곧 업데이트될 예정입니다.
+                작품들이 곧 업데이트될 예정입니다.
               </p>
             </div>
           )}
@@ -75,4 +74,4 @@ const TraditionalPage = () => {
   );
 };
 
-export default TraditionalPage;
+export default WorksPage;

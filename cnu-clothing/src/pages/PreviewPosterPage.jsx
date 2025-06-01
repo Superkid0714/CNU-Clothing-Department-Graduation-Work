@@ -97,7 +97,7 @@ const PreviewPosterPage = () => {
           {/* 작품 보기 버튼 */}
           <div className="flex justify-center animate-slide-up delay-1000">
             <button
-              onClick={() => navigate('/main')}
+              onClick={() => navigate('/archive')}
               className="group inline-flex flex-col items-center transition-all duration-300 hover:opacity-80"
               aria-label="View Exhibition"
             >

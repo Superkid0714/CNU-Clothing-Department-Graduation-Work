@@ -33,8 +33,8 @@ const Header = () => {
       {/* 헤더 전체에 동일한 패딩 */}
       <header className="px-6 md:px-16 lg:px-24 pt-16">
         <div className="container mx-auto">
-          {/* 타이틀 */}
-          <Link to="/main" className="block mb-12">
+          {/* 타이틀 - 아카이브(/archive)로 링크 */}
+          <Link to="/archive" className="block mb-12">
             <h1
               className="text-5xl font-bold tracking-tight"
               style={{ color: '#20418f' }}
