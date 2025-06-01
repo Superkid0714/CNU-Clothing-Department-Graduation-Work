@@ -96,15 +96,15 @@ const WorkDetailPage = ({ category }) => {
               </div>
 
               {/* 썸네일 이미지들 - 가로 스크롤 */}
-              <div className="overflow-x-auto">
-                <div className="flex space-x-3 pb-2">
+              <div className="overflow-x-auto p-2">
+                <div className="flex space-x-3">
                   {workData.images.map((image, index) => (
                     <div
                       key={index}
-                      className={`flex-shrink-0 w-20 h-20 bg-gray-100 rounded-lg overflow-hidden cursor-pointer transition-all duration-200 ${
+                      className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden cursor-pointer transition-all duration-200 ${
                         selectedImageIndex === index
-                          ? 'ring-2 ring-blue-800 ring-offset-2'
-                          : 'hover:opacity-80'
+                          ? 'border-4 border-blue-800'
+                          : 'border-2 border-gray-200 hover:border-gray-300'
                       }`}
                       onClick={() => setSelectedImageIndex(index)}
                     >
