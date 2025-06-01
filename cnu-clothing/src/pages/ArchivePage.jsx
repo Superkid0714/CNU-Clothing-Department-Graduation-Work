@@ -54,7 +54,7 @@ const ArchivePage = () => {
             Archive
           </h2>
           <p className="text-lg text-gray-600 mb-12">
-            전남대학교 의류학과 졸업작품 카테고리별 전시
+            전남대학교 의류학과 졸업작품 전시
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

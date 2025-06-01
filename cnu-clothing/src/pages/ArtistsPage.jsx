@@ -87,7 +87,7 @@ const ArtistsPage = () => {
             Artists
           </h2>
           <p className="text-base md:text-lg text-gray-600 mb-8 md:mb-12">
-            전남대학교 의류학과 졸업작품 참여 아티스트들
+            전남대학교 의류학과 학생들
           </p>
 
           {/* 분야별 아티스트 섹션 */}
