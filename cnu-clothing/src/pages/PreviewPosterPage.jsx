@@ -10,7 +10,7 @@ const PreviewPosterPage = () => {
     document.title = 'Parergon: Layered Being - CNU 2025 Graduation Show';
     // 즉시 스크롤을 맨 위로 이동
     window.scrollTo(0, 0);
-    // body와 html의 스크롤도 초기화 (브라우저 호환성)
+    // body와 html의 스크롤도 초기화
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 

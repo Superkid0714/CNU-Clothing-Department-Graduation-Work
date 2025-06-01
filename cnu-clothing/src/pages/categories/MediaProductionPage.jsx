@@ -11,23 +11,22 @@ const MediaProductionPage = () => {
     document.documentElement.scrollTop = 0;
   }, []);
 
-  // 미디어제작 작품 데이터 (실제 이미지 경로로 수정하세요)
+  // 미디어제작 작품 데이터
   const mediaWorks = [
     {
       id: 1,
       title: '미디어제작 작품 1',
       artist: '학생명 1',
-      image: '/images/media-production/work1.jpg', // 실제 파일명으로 교체
+      image: '/images/media-production/work1.jpg',
       description: '미디어제작 작품에 대한 설명입니다.',
     },
     {
       id: 2,
       title: '미디어제작 작품 2',
       artist: '학생명 2',
-      image: '/images/media-production/work2.jpg', // 실제 파일명으로 교체
+      image: '/images/media-production/work2.jpg',
       description: '미디어제작 작품에 대한 설명입니다.',
     },
-    // 더 많은 작품들을 추가하세요
   ];
 
   return (

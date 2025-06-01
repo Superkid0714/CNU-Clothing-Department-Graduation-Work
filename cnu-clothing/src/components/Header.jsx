@@ -7,7 +7,7 @@ const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const timeoutRef = useRef(null);
 
-  // 카테고리 정보 (한글명과 영어 경로 매핑)
+  // 카테고리 정보
   const archiveCategories = [
     { name: '클로', path: 'clo' },
     { name: '전통복식', path: 'traditional' },
@@ -42,7 +42,7 @@ const Header = () => {
       {/* 데스크탑 헤더 */}
       <header className="hidden md:block px-6 md:px-16 lg:px-24 pt-16">
         <div className="container mx-auto">
-          {/* 타이틀 - 아카이브(/archive)로 링크 */}
+          {/* 타이틀  */}
           <Link to="/archive" className="block mb-12">
             <h1
               className="text-5xl font-bold tracking-tight"
@@ -54,7 +54,7 @@ const Header = () => {
 
           {/* 네비게이션 메뉴 */}
           <nav className="flex items-baseline mb-20 text-xl font-medium relative">
-            {/* Archive 메뉴 - 드롭다운 포함 */}
+            {/* Archive 메뉴 */}
             <div
               className="relative"
               onMouseEnter={handleMouseEnter}
@@ -83,7 +83,7 @@ const Header = () => {
                 )}
               </Link>
 
-              {/* 드롭다운 메뉴 (작은 폰트 적용) */}
+              {/* 드롭다운 메뉴  */}
               {showArchiveDropdown && (
                 <div className="absolute top-full left-0 pt-2 z-50">
                   <div className="h-2 w-full"></div>

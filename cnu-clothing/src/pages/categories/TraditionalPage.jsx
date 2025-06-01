@@ -11,23 +11,22 @@ const TraditionalPage = () => {
     document.documentElement.scrollTop = 0;
   }, []);
 
-  // 전통복식 작품 데이터 (실제 이미지 경로로 수정하세요)
+  // 전통복식 작품 데이터 (
   const traditionalWorks = [
     {
       id: 1,
       title: '전통복식 작품 1',
       artist: '학생명 1',
-      image: '/images/traditional/work1.jpg', // 실제 파일명으로 교체
+      image: '/images/traditional/work1.jpg',
       description: '전통복식 작품에 대한 설명입니다.',
     },
     {
       id: 2,
       title: '전통복식 작품 2',
       artist: '학생명 2',
-      image: '/images/traditional/work2.jpg', // 실제 파일명으로 교체
+      image: '/images/traditional/work2.jpg',
       description: '전통복식 작품에 대한 설명입니다.',
     },
-    // 더 많은 작품들을 추가하세요
   ];
 
   return (

@@ -23,14 +23,14 @@ const ClothingPage = () => {
       id: 2,
       title: '클로 작품 2',
       artist: '박서연',
-      image: '/images/clothing/work2.jpg', // 실제 파일명으로 교체
+      image: '/images/clothing/work2.jpg',
       description: '클로 작품에 대한 설명입니다.',
     },
     {
       id: 3,
       title: '클로 작품 3',
       artist: '이지원',
-      image: '/images/clothing/work3.jpg', // 실제 파일명으로 교체
+      image: '/images/clothing/work3.jpg',
       description: '클로 작품에 대한 설명입니다.',
     },
   ];

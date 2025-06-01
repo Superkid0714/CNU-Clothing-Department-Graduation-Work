@@ -10,7 +10,7 @@ const WorkDetailPage = ({ category }) => {
   const [copySuccess, setCopySuccess] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
-  // 실제로는 API나 데이터에서 작품 정보를 가져올 것
+  // 예시용
   const workData = {
     id: workId,
     title: '작품 제목',

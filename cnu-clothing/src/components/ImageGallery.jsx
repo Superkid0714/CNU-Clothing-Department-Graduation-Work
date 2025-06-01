@@ -23,7 +23,7 @@ const ImageGallery = ({ works = [], category }) => {
     if (category) {
       navigate(`/archive/${category}/${work.id}`);
     } else {
-      // category가 없으면 모달 열기 (기존 방식)
+      // category가 없으면 모달 열기
       openModal(work);
     }
   };
