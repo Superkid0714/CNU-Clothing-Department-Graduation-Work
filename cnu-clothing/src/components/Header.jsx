@@ -6,12 +6,13 @@ const Header = () => {
   const [showArchiveDropdown, setShowArchiveDropdown] = useState(false);
   const timeoutRef = useRef(null);
 
+  // 카테고리 정보 (한글명과 영어 경로 매핑)
   const archiveCategories = [
-    '클로',
-    '전통복식',
-    '작품',
-    '미디어제작',
-    '패션마케팅',
+    { name: '클로', path: 'clo' },
+    { name: '전통복식', path: 'traditional' },
+    { name: '작품', path: 'works' },
+    { name: '미디어제작', path: 'media-production' },
+    { name: '패션마케팅', path: 'fashion-marketing' },
   ];
 
   const handleMouseEnter = () => {
@@ -54,14 +55,18 @@ const Header = () => {
               <Link
                 to="/archive"
                 className={`relative block px-3 py-2 rounded-md transition-all duration-200 ${
-                  location.pathname === '/archive' ? 'font-semibold' : ''
+                  location.pathname === '/archive' ||
+                  location.pathname.startsWith('/archive/')
+                    ? 'font-semibold'
+                    : ''
                 }`}
                 style={{ color: '#20418f' }}
                 onMouseEnter={(e) => (e.target.style.color = '#1a3777')}
                 onMouseLeave={(e) => (e.target.style.color = '#20418f')}
               >
                 Archive
-                {location.pathname === '/archive' && (
+                {(location.pathname === '/archive' ||
+                  location.pathname.startsWith('/archive/')) && (
                   <span
                     className="absolute -bottom-1 left-0 w-full h-0.5"
                     style={{ backgroundColor: '#20418f' }}
@@ -78,16 +83,25 @@ const Header = () => {
                       {archiveCategories.map((category, index) => (
                         <li key={index} className="relative">
                           <Link
-                            to={`/archive/${category.toLowerCase().replace(/ /g, '-')}`}
-                            className="block px-3 py-2 rounded-md transition-colors duration-200 text-slate-600 hover:font-medium whitespace-nowrap text-sm"
+                            to={`/archive/${category.path}`}
+                            className={`block px-3 py-2 rounded-md transition-colors duration-200 text-slate-600 hover:font-medium whitespace-nowrap text-sm ${
+                              location.pathname === `/archive/${category.path}`
+                                ? 'font-medium text-blue-800'
+                                : ''
+                            }`}
                             onMouseEnter={(e) => {
                               e.target.style.color = '#20418f';
                             }}
                             onMouseLeave={(e) => {
-                              e.target.style.color = '';
+                              if (
+                                location.pathname !==
+                                `/archive/${category.path}`
+                              ) {
+                                e.target.style.color = '';
+                              }
                             }}
                           >
-                            {category}
+                            {category.name}
                           </Link>
                         </li>
                       ))}
