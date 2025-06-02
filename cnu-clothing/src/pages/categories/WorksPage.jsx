@@ -15,19 +15,100 @@ const WorksPage = () => {
   const works = [
     {
       id: 1,
-      title: '작품 1',
-      artist: '학생명 1',
-      image: '/images/works/work1.jpg',
-      description: '작품에 대한 설명입니다.',
+      title: 'Sérénade en Rose',
+      artist: '박정윤',
+      image: '/works/1_main.jpg',
     },
     {
       id: 2,
-      title: '작품 2',
-      artist: '학생명 2',
-      image: '/images/works/work2.jpg',
-      description: '작품에 대한 설명입니다.',
+      title: 'Metamorphosis',
+      artist: '오현경',
+      image: '/works/2_main.jpg',
     },
-    // 더 많은 작품들을 추가하세요
+    {
+      id: 3,
+      title: '사탄화 : 천사의 부재',
+      artist: '김주영',
+      image: '/works/3_main.jpg',
+    },
+    {
+      id: 4,
+      title: 'Fatal',
+      artist: '박민혁',
+      image: '/works/4_main.jpg',
+    },
+    {
+      id: 5,
+      title: '채식주의',
+      artist: 'DAI CHUNHUI',
+      image: '/works/5_main.jpg',
+    },
+    {
+      id: 6,
+      title: 'Killing myself',
+      artist: 'HUANG JINGYA',
+      image: '/works/6_main.jpg',
+    },
+    {
+      id: 7,
+      title: 'Deconstruct to Redefine',
+      artist: '이영석',
+      image: '/works/7_main.jpg',
+    },
+    {
+      id: 8,
+      title: 'NO TITLE',
+      artist: '최영철',
+      image: '/works/8_main.jpg',
+    },
+    {
+      id: 9,
+      title: 'Beyond Reason, Into Light (광란의 빛)',
+      artist: '유재하',
+      image: '/works/9_main.jpg',
+    },
+    {
+      id: 10,
+      title: '바람의 노래를 들어라',
+      artist: '전필립',
+      image: '/works/10_main.jpg',
+    },
+    {
+      id: 11,
+      title: 'boRn;fire (본파이어)',
+      artist: '안정윤',
+      image: '/works/11_main.jpg',
+    },
+    {
+      id: 12,
+      title: '파란 언덕',
+      artist: '박찬희',
+      image: '/works/12_main.jpg',
+    },
+    {
+      id: 13,
+      title: '화무십일홍 : 花無十日紅',
+      artist: '김소민',
+      image: '/works/13_main.jpg',
+    },
+    {
+      id: 14,
+      title: '형태의 해체, 그 이면',
+      artist: '조수아',
+      image: '/works/14_main.jpg',
+    },
+    {
+      id: 15,
+      title: '입혀진 실존',
+      artist: '최훈비',
+      image: '/works/15_main.jpg',
+    },
+    {
+      id: 16,
+      title: '불편한 실용성 (hostile architecture)',
+      artist: '전은서',
+      image: '/works/16_main.jpg',
+    },
   ];
 
   return (

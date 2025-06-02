@@ -21,7 +21,7 @@ const ClothingPage = () => {
     },
     {
       id: 2,
-      title: 'Tidy Deviation(정돈된 일탈)',
+      title: 'Tidy Deviation (정돈된 일탈)',
       artist: '신채영',
       image: '/clothing/2_main.jpg',
     },
