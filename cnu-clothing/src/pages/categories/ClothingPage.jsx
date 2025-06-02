@@ -17,21 +17,31 @@ const ClothingPage = () => {
       id: 1,
       title: 'Phoenix Veil',
       artist: '배소진',
-      image: 'public/clothing/1_main.jpg',
+      image: '/clothing/1_main.jpg',
     },
     {
       id: 2,
-      title: '클로 작품 2',
-      artist: '박서연',
-      image: '/images/clothing/work2.jpg',
-      description: '클로 작품에 대한 설명입니다.',
+      title: 'Tidy Deviation(정돈된 일탈)',
+      artist: '신채영',
+      image: '/clothing/2_main.jpg',
     },
     {
       id: 3,
-      title: '클로 작품 3',
-      artist: '이지원',
-      image: '/images/clothing/work3.jpg',
-      description: '클로 작품에 대한 설명입니다.',
+      title: '도시:들',
+      artist: '박채윤',
+      image: '/clothing/3_main.jpg',
+    },
+    {
+      id: 4,
+      title: 'Lament of a rose',
+      artist: '정서윤',
+      image: '/clothing/4_main.jpg',
+    },
+    {
+      id: 5,
+      title: '물',
+      artist: '박주아',
+      image: '/clothing/5_main.jpg',
     },
   ];
 
@@ -54,33 +64,7 @@ const ClothingPage = () => {
       {/* 작품 갤러리 */}
       <div className="px-6 md:px-16 lg:px-24 pb-16">
         <div className="container mx-auto">
-          {clothingWorks.length > 0 ? (
-            <ImageGallery works={clothingWorks} category="clo" />
-          ) : (
-            <div className="text-center py-20">
-              <div className="inline-flex items-center justify-center w-24 h-24 bg-blue-100 rounded-full mb-6">
-                <svg
-                  className="w-12 h-12 text-blue-800"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-blue-800 mb-4">
-                작품을 준비 중입니다
-              </h3>
-              <p className="text-gray-600">
-                클로 카테고리의 작품들이 곧 업데이트될 예정입니다.
-              </p>
-            </div>
-          )}
+          <ImageGallery works={clothingWorks} category="clo" />
         </div>
       </div>
 
