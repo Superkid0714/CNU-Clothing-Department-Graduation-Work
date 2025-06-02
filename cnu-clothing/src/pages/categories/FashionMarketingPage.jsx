@@ -15,17 +15,39 @@ const FashionMarketingPage = () => {
   const marketingWorks = [
     {
       id: 1,
-      title: '패션마케팅 작품 1',
-      artist: '학생명 1',
-      image: '/images/fashion-marketing/work1.jpg',
-      description: '패션마케팅 작품에 대한 설명입니다.',
+      title: 'sez (세즈)',
+      artist: '정은정',
+      image: '/fashion-marketing/1_main.jpg',
     },
     {
       id: 2,
-      title: '패션마케팅 작품 2',
-      artist: '학생명 2',
-      image: '/images/fashion-marketing/work2.jpg',
-      description: '패션마케팅 작품에 대한 설명입니다.',
+      title: 'EASON (이즌)',
+      artist: '문서희',
+      image: '/fashion-marketing/2_main.jpg',
+    },
+    {
+      id: 3,
+      title: 'NEUFORM (뉴폼)',
+      artist: '신다솔',
+      image: '/fashion-marketing/3_main.jpg',
+    },
+    {
+      id: 4,
+      title: 'tomoroom (투모룸)',
+      artist: '김채환',
+      image: '/fashion-marketing/4_main.jpg',
+    },
+    {
+      id: 5,
+      title: 'FORGEGRID (포지그리드)',
+      artist: '최세령',
+      image: '/fashion-marketing/5_main.jpg',
+    },
+    {
+      id: 6,
+      title: '스포츠 브랜드의 라이프스타일 브랜딩 전략 탐구',
+      artist: '유다연',
+      image: '/fashion-marketing/6_main.jpg',
     },
   ];
 

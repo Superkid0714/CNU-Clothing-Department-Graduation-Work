@@ -15,17 +15,39 @@ const TraditionalPage = () => {
   const traditionalWorks = [
     {
       id: 1,
-      title: '전통복식 작품 1',
-      artist: '학생명 1',
-      image: '/images/traditional/work1.jpg',
-      description: '전통복식 작품에 대한 설명입니다.',
+      title: '대한제국 대례복 연구',
+      artist: '문경진',
+      image: '/traditional/1_main.jpg',
     },
     {
       id: 2,
-      title: '전통복식 작품 2',
-      artist: '학생명 2',
-      image: '/images/traditional/work2.jpg',
-      description: '전통복식 작품에 대한 설명입니다.',
+      title: '웨딩, 전통을 입다',
+      artist: '오유진',
+      image: '/traditional/2_main.jpg',
+    },
+    {
+      id: 3,
+      title: '월하 (月下)',
+      artist: '성채원',
+      image: '/traditional/3_main.jpg',
+    },
+    {
+      id: 4,
+      title: '꽃의 향연',
+      artist: '박지후',
+      image: '/traditional/4_main.jpg',
+    },
+    {
+      id: 5,
+      title: 'A legacy of TIME : 시간이 남긴 유산',
+      artist: '이승유',
+      image: '/traditional/5_main.jpg',
+    },
+    {
+      id: 6,
+      title: 'THE 黑 :경계를 허물다',
+      artist: '송하경',
+      image: '/traditional/6_main.jpg',
     },
   ];
 

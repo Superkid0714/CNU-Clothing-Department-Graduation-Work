@@ -15,17 +15,39 @@ const MediaProductionPage = () => {
   const mediaWorks = [
     {
       id: 1,
-      title: '미디어제작 작품 1',
-      artist: '학생명 1',
-      image: '/images/media-production/work1.jpg',
-      description: '미디어제작 작품에 대한 설명입니다.',
+      title: 'XLIM : 해체된 미학',
+      artist: '박태서',
+      image: '/media-production/1_main.jpg',
     },
     {
       id: 2,
-      title: '미디어제작 작품 2',
-      artist: '학생명 2',
-      image: '/images/media-production/work2.jpg',
-      description: '미디어제작 작품에 대한 설명입니다.',
+      title: 'Cotton is the best flower.',
+      artist: '박주영',
+      image: '/media-production/2_main.jpg',
+    },
+    {
+      id: 3,
+      title: 'WORKSIGHT',
+      artist: '배나연',
+      image: '/media-production/3_main.jpg',
+    },
+    {
+      id: 4,
+      title: 'MOD (모드)',
+      artist: '김민진',
+      image: '/media-production/4_main.jpg',
+    },
+    {
+      id: 5,
+      title: 'Nike Code',
+      artist: '류가령',
+      image: '/media-production/5_main.jpg',
+    },
+    {
+      id: 6,
+      title: 'Untitled',
+      artist: '이정민',
+      image: '/media-production/6_main.jpg',
     },
   ];
 
