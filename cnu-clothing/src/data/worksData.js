@@ -469,10 +469,10 @@ Brand CONCEPT
 - Reliable 신뢰할 수 있는 품질과 착용감`,
       images: [
         '/fashion-marketing/3_main.jpg',
-        '/fashion-marketing/3_sub(1)',
-        '/fashion-marketing/3_sub(2)',
-        '/fashion-marketing/3_sub(3)',
-        '/fashion-marketing/3_sub(4)',
+        '/fashion-marketing/3_sub(1).jpg',
+        '/fashion-marketing/3_sub(2).jpg',
+        '/fashion-marketing/3_sub(3).jpg',
+        '/fashion-marketing/3_sub(4).jpg',
       ],
     },
     {
