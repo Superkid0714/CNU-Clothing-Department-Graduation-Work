@@ -176,88 +176,117 @@ const Header = () => {
         </div>
 
         {/* 모바일 메뉴 오버레이 */}
-        {showMobileMenu && (
+        <div
+          className={`fixed inset-0 z-50 transition-opacity duration-300 ${
+            showMobileMenu ? 'opacity-100 visible' : 'opacity-0 invisible'
+          }`}
+        >
+          {/* 배경 오버레이 */}
           <div
-            className="fixed inset-0 z-50 bg-black bg-opacity-50"
+            className={`absolute inset-0 bg-black transition-opacity duration-300 ${
+              showMobileMenu ? 'bg-opacity-50' : 'bg-opacity-0'
+            }`}
             onClick={closeMobileMenu}
+          />
+
+          {/* 메뉴 패널 */}
+          <div
+            className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-out ${
+              showMobileMenu ? 'translate-x-0' : 'translate-x-full'
+            }`}
           >
-            <div className="fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300">
-              {/* 메뉴 헤더 */}
-              <div className="flex items-center justify-between p-4 border-b border-gray-200">
-                <h2 className="text-lg font-semibold text-blue-800">메뉴</h2>
-                <button
-                  onClick={closeMobileMenu}
-                  className="p-2 rounded-md text-gray-500 hover:bg-gray-100 transition-colors"
-                  aria-label="메뉴 닫기"
+            {/* 메뉴 헤더 */}
+            <div className="flex items-center justify-between p-4 border-b border-gray-200">
+              <h2 className="text-lg font-semibold text-blue-800">메뉴</h2>
+              <button
+                onClick={closeMobileMenu}
+                className="p-2 rounded-md text-gray-500 hover:bg-gray-100 transition-all duration-200 hover:scale-110"
+                aria-label="메뉴 닫기"
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M6 18L18 6M6 6l12 12"
-                    ></path>
-                  </svg>
-                </button>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+
+            {/* 메뉴 내용 */}
+            <div className="p-4 space-y-6">
+              {/* Archive 섹션 */}
+              <div className="mobile-menu-item-1">
+                <Link
+                  to="/archive"
+                  onClick={closeMobileMenu}
+                  className={`block text-lg font-semibold mb-3 p-2 rounded-md transition-all duration-200 hover:bg-blue-50 ${
+                    location.pathname === '/archive' ||
+                    location.pathname.startsWith('/archive/')
+                      ? 'text-blue-800 bg-blue-50'
+                      : 'text-gray-700 hover:text-blue-800'
+                  }`}
+                >
+                  Archive
+                </Link>
+                <div className="ml-4 space-y-1">
+                  {archiveCategories.map((category, index) => (
+                    <Link
+                      key={index}
+                      to={`/archive/${category.path}`}
+                      onClick={closeMobileMenu}
+                      className={`block py-2 px-3 text-sm rounded-md transition-all duration-200 hover:bg-blue-50 hover:translate-x-1 mobile-menu-category ${
+                        location.pathname === `/archive/${category.path}`
+                          ? 'text-blue-800 font-medium bg-blue-50'
+                          : 'text-gray-600 hover:text-blue-800'
+                      }`}
+                      style={{
+                        animationDelay: `${(index + 1) * 100}ms`,
+                        opacity: showMobileMenu ? 1 : 0,
+                        transform: showMobileMenu
+                          ? 'translateX(0)'
+                          : 'translateX(20px)',
+                        transition: `all 0.4s ease-out ${(index + 1) * 100}ms`,
+                      }}
+                    >
+                      {category.name}
+                    </Link>
+                  ))}
+                </div>
               </div>
 
-              {/* 메뉴 내용 */}
-              <div className="p-4 space-y-6">
-                {/* Archive 섹션 */}
-                <div>
-                  <Link
-                    to="/archive"
-                    onClick={closeMobileMenu}
-                    className={`block text-lg font-semibold mb-3 ${
-                      location.pathname === '/archive' ||
-                      location.pathname.startsWith('/archive/')
-                        ? 'text-blue-800'
-                        : 'text-gray-700'
-                    }`}
-                  >
-                    Archive
-                  </Link>
-                  <div className="ml-4 space-y-2">
-                    {archiveCategories.map((category, index) => (
-                      <Link
-                        key={index}
-                        to={`/archive/${category.path}`}
-                        onClick={closeMobileMenu}
-                        className={`block py-2 text-sm ${
-                          location.pathname === `/archive/${category.path}`
-                            ? 'text-blue-800 font-medium'
-                            : 'text-gray-600'
-                        }`}
-                      >
-                        {category.name}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Artists 섹션 */}
-                <div>
-                  <Link
-                    to="/artists"
-                    onClick={closeMobileMenu}
-                    className={`block text-lg font-semibold ${
-                      location.pathname.includes('/artists')
-                        ? 'text-blue-800'
-                        : 'text-gray-700'
-                    }`}
-                  >
-                    Artists
-                  </Link>
-                </div>
+              {/* Artists 섹션 */}
+              <div
+                className="mobile-menu-item-2"
+                style={{
+                  opacity: showMobileMenu ? 1 : 0,
+                  transform: showMobileMenu
+                    ? 'translateX(0)'
+                    : 'translateX(20px)',
+                  transition: 'all 0.4s ease-out 0.3s',
+                }}
+              >
+                <Link
+                  to="/artists"
+                  onClick={closeMobileMenu}
+                  className={`block text-lg font-semibold p-2 rounded-md transition-all duration-200 hover:bg-blue-50 ${
+                    location.pathname.includes('/artists')
+                      ? 'text-blue-800 bg-blue-50'
+                      : 'text-gray-700 hover:text-blue-800'
+                  }`}
+                >
+                  Artists
+                </Link>
               </div>
             </div>
           </div>
-        )}
+        </div>
       </header>
     </>
   );

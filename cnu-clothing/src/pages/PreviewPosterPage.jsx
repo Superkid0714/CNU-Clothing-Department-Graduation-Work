@@ -32,8 +32,8 @@ const PreviewPosterPage = () => {
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
-      {/* 상단 여백: 모바일 32px, 데스크탑 64px */}
-      <div className="w-full h-8 md:h-16"></div>
+      {/* 상단 여백: 모바일 32px, 데스크탑 32px */}
+      <div className="w-full h-8 md:h-8"></div>
 
       <div
         className={`w-full flex flex-col items-center px-4 md:px-6 transition-all duration-1000 ${
@@ -42,52 +42,52 @@ const PreviewPosterPage = () => {
       >
         <div className="max-w-3xl mx-auto text-center">
           {/* 상단 텍스트 */}
-          <div className="mb-6 md:mb-8 animate-fade-in">
-            <h2 className="text-lg md:text-xl lg:text-2xl font-medium text-blue-800">
+          <div className="mb-6 md:mb-6 animate-fade-in">
+            <h2 className="text-lg md:text-lg lg:text-xl font-medium text-blue-800">
               CNU Clothing & Textiles
             </h2>
-            <h3 className="text-base md:text-lg lg:text-xl font-medium text-blue-800">
+            <h3 className="text-base md:text-base lg:text-lg font-medium text-blue-800">
               2025 Graduation Show
             </h3>
           </div>
 
           {/* 메인 타이틀 */}
-          <div className="space-y-1 mb-8 md:mb-10 animate-fade-in delay-200">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-blue-800 tracking-tight font-display">
+          <div className="space-y-1 mb-8 md:mb-8 animate-fade-in delay-200">
+            <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold text-blue-800 tracking-tight font-display">
               Parergon
             </h1>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-blue-800 tracking-tight font-display">
+            <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-bold text-blue-800 tracking-tight font-display">
               Layered Being
             </h1>
           </div>
 
           {/* 한글 타이틀 + 부제 */}
-          <div className="animate-fade-in delay-400 text-blue-800 mb-6 md:mb-8">
-            <div className="space-y-6 md:space-y-8 lg:space-y-10">
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-medium">
+          <div className="animate-fade-in delay-400 text-blue-800 mb-6 md:mb-6">
+            <div className="space-y-6 md:space-y-6 lg:space-y-8">
+              <h3 className="text-xl md:text-xl lg:text-2xl font-medium">
                 나를 이루는 외곽선
               </h3>
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-medium">
+              <h3 className="text-xl md:text-xl lg:text-2xl font-medium">
                 그 안의 이야기들
               </h3>
             </div>
           </div>
 
           {/* 설명 텍스트 */}
-          <div className="mb-12 md:mb-16 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed text-blue-800 opacity-80 max-w-2xl mx-auto animate-slide-up delay-600">
-            <p className="mb-6 md:mb-8">
+          <div className="mb-8 md:mb-8 text-xs sm:text-sm md:text-sm lg:text-base leading-relaxed text-blue-800 opacity-80 max-w-2xl mx-auto animate-slide-up delay-800">
+            <p className="mb-6 md:mb-6">
               우리는 하나의 선으로 정의되지 않는다.
             </p>
-            <p className="mb-3 md:mb-4">
+            <p className="mb-3 md:mb-3">
               감정의 여운, 타인의 시선, 흘러간 기억들
               <br />그 모든 것이 겹겹이 쌓여 지금의 &lsquo;나&rsquo;를 이룬다.
             </p>
-            <p className="mb-3 md:mb-4">
+            <p className="mb-3 md:mb-3">
               이 전시는 그러한 겹들을
               <br />
               의류라는 형태로 풀어낸 기록물이다.
             </p>
-            <p className="mb-3 md:mb-4">
+            <p className="mb-3 md:mb-3">
               옷은 단지 나를 가리는 외피를 넘어
               <br />
               내 안에 남은 감정, 나를 바라보는 시선,
@@ -98,7 +98,7 @@ const PreviewPosterPage = () => {
               <br />
               작품을 인식할 수 있는 액자의 역할을 한다.
             </p>
-            <p className="mb-3 md:mb-4">
+            <p className="mb-3 md:mb-3">
               작품을 통해 우리는 나를 감싸고 있던 것들과 마주하게 된다.
               <br />그 겹들을 하나씩 들춰보며 진짜 &lsquo;나&rsquo;를 찾아가는
               여정을 떠난다.
@@ -106,7 +106,7 @@ const PreviewPosterPage = () => {
           </div>
 
           {/* 전시 정보 */}
-          <div className="mb-10 md:mb-12 text-sm md:text-base lg:text-lg text-blue-800 opacity-90 animate-slide-up delay-800">
+          <div className="mb-10 md:mb-8 text-sm md:text-base text-blue-800 opacity-90 animate-slide-up delay-1000">
             <p className="mb-1">Launch Event | June 11 3:00 PM</p>
             <p className="mb-1">Exhibition Period | June 11 – 17, 5:00 PM</p>
             <p className="mb-1">
@@ -121,11 +121,11 @@ const PreviewPosterPage = () => {
               className="group inline-flex flex-col items-center transition-all duration-300 hover:opacity-80"
               aria-label="View Exhibition"
             >
-              <span className="text-base md:text-lg text-blue-800 mb-2 md:mb-3 font-medium">
+              <span className="text-base md:text-lg text-blue-800 mb-2 md:mb-2 font-medium">
                 작품 보기
               </span>
               <svg
-                className="w-10 h-10 md:w-12 md:h-12 text-blue-800 animate-bounce"
+                className="w-10 h-10 md:w-10 md:h-10 text-blue-800 animate-bounce"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

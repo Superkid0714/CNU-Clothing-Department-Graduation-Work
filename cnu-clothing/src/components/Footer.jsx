@@ -14,7 +14,6 @@ const Footer = () => {
               <div className="text-gray-600 text-sm space-y-2">
                 <p>전시 기간: 2025년 6월 11일 - 17일</p>
                 <p>장소: 전남대학교 컨벤션홀</p>
-                <p>런치 이벤트: 6월 11일 오후 3시</p>
               </div>
             </div>
 

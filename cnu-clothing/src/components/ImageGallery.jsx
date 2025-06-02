@@ -52,24 +52,28 @@ const ImageGallery = ({ works = [], category }) => {
           {/* 이미지 컨테이너 - 3:4 비율 (900x1200) */}
           <div className="relative aspect-[3/4] bg-gray-100 overflow-hidden">
             <img
-              src={work.image}
+              src={work.images ? work.images[0] : work.image}
               alt={work.title || '작품 이미지'}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               onError={(e) => {
-                console.error(`이미지 로드 실패: ${work.image}`);
+                console.error(
+                  `이미지 로드 실패: ${work.images ? work.images[0] : work.image}`
+                );
                 // 에러 시 기본 이미지로 대체
                 e.target.src =
-                  'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjUzMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPuydtOuvuOyngCDspJXsnpE8L3RleHQ+PC9zdmc+';
+                  'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjUzMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPuydtOuvuOyngDwvdGV4dD48L3N2Zz4=';
               }}
             />
           </div>
 
           {/* 텍스트 영역 */}
           <div className="pt-3">
-            <h3 className="text-lg font-bold text-blue-800 mb-1">
+            <h3 className="text-sm md:text-lg font-bold text-blue-800 mb-1">
               {work.title || '제목 없음'}
             </h3>
-            <p className="text-sm text-gray-600">{work.artist || '작가명'}</p>
+            <p className="text-xs md:text-sm text-gray-600">
+              {work.artist || '작가명'}
+            </p>
           </div>
         </div>
       ))}
@@ -84,7 +88,8 @@ ImageGallery.propTypes = {
       id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
       title: PropTypes.string,
       artist: PropTypes.string,
-      image: PropTypes.string.isRequired,
+      image: PropTypes.string,
+      images: PropTypes.arrayOf(PropTypes.string),
       description: PropTypes.string,
     })
   ),
