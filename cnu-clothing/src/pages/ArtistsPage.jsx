@@ -54,18 +54,20 @@ const ArtistsPage = () => {
                       <Link
                         key={student.id}
                         to={`/archive/${categoryKey}/${student.workId}`}
-                        className="group block"
+                        className="group block touch-manipulation"
                       >
                         <div
                           className="py-3 md:py-4 
-                                      transition-all duration-300 ease-out
+                                      transition-all duration-150 ease-out
                                       md:hover:-translate-y-1
-                                      active:scale-95 active:bg-blue-50 active:text-blue-600"
+                                      active:scale-95 active:duration-75
+                                      select-none"
                         >
                           <h4
                             className="text-sm md:text-base lg:text-lg font-medium text-blue-800 
-                                       transition-colors duration-300
-                                       md:group-hover:text-blue-600 text-center leading-tight"
+                                       transition-colors duration-150
+                                       md:group-hover:text-blue-600 
+                                       group-active:text-blue-600 text-center leading-tight pointer-events-none"
                           >
                             {student.name}
                           </h4>

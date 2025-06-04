@@ -49,16 +49,23 @@ const ArchivePage = () => {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {categories.map((category, index) => (
-              <Link key={index} to={category.path} className="block group">
+              <Link
+                key={index}
+                to={category.path}
+                className="block group touch-manipulation"
+              >
                 <div
                   className="py-4 md:py-6 lg:py-8 
-                              transition-all duration-300 ease-out
-                              md:hover:-translate-y-1"
+                              transition-all duration-150 ease-out
+                              md:hover:-translate-y-1
+                              active:scale-95 active:duration-75
+                              select-none"
                 >
                   <h3
                     className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-blue-800 
-                               transition-colors duration-300
-                               md:group-hover:text-blue-600 leading-tight"
+                               transition-colors duration-150
+                               md:group-hover:text-blue-600 
+                               group-active:text-blue-600 leading-tight pointer-events-none"
                   >
                     {category.name}
                   </h3>
