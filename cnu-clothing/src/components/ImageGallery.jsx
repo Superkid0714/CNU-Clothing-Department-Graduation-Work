@@ -42,15 +42,15 @@ const ImageGallery = ({ works = [], category }) => {
   }
 
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10">
       {works.map((work) => (
         <div
           key={work.id}
           className="group cursor-pointer transition-all duration-300 transform hover:-translate-y-2"
           onClick={() => handleWorkClick(work)}
         >
-          {/* 이미지 컨테이너 - 3:4 비율 (900x1200) */}
-          <div className="relative aspect-[3/4] bg-gray-100 overflow-hidden">
+          {/* 이미지 컨테이너 (900x1200) */}
+          <div className="relative aspect-[3/4] bg-gray-100 overflow-hidden mb-4 md:mb-5">
             <img
               src={work.images ? work.images[0] : work.image}
               alt={work.title || '작품 이미지'}
@@ -67,8 +67,8 @@ const ImageGallery = ({ works = [], category }) => {
           </div>
 
           {/* 텍스트 영역 */}
-          <div className="pt-3">
-            <h3 className="text-sm md:text-lg font-bold text-blue-800 mb-1">
+          <div>
+            <h3 className="text-sm md:text-lg font-bold text-blue-800 mb-1 md:mb-2 leading-tight">
               {work.title || '제목 없음'}
             </h3>
             <p className="text-xs md:text-sm text-gray-600">
