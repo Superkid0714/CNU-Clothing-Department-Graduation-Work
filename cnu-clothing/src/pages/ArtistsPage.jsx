@@ -12,7 +12,6 @@ const ArtistsPage = () => {
   Object.entries(worksData).forEach(([categoryKey, works]) => {
     artistsByCategory[categoryKey] = {
       title: getCategoryName(categoryKey),
-      color: getCategoryColor(categoryKey),
       students: works.map((work) => ({
         id: work.id,
         name: work.artist,
@@ -20,18 +19,6 @@ const ArtistsPage = () => {
       })),
     };
   });
-
-  // 카테고리별 색상 정의
-  function getCategoryColor(category) {
-    const colors = {
-      clo: 'from-blue-500 to-blue-600',
-      traditional: 'from-purple-500 to-purple-600',
-      works: 'from-green-500 to-green-600',
-      'media-production': 'from-red-500 to-red-600',
-      'fashion-marketing': 'from-yellow-500 to-yellow-600',
-    };
-    return colors[category] || 'from-gray-500 to-gray-600';
-  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -51,11 +38,8 @@ const ArtistsPage = () => {
             {Object.entries(artistsByCategory).map(
               ([categoryKey, category]) => (
                 <section key={categoryKey} className="space-y-4 md:space-y-6">
-                  {/* 분야 제목 */}
+                  {/* 분야 제목  */}
                   <div className="flex items-center space-x-3 md:space-x-4">
-                    <div
-                      className={`w-3 h-6 md:w-4 md:h-8 bg-gradient-to-b ${category.color} rounded-full`}
-                    ></div>
                     <h3 className="text-2xl md:text-3xl font-bold text-blue-800">
                       {category.title}
                     </h3>
@@ -64,7 +48,7 @@ const ArtistsPage = () => {
                     </span>
                   </div>
 
-                  {/* 학생 카드 그리드 */}
+                  {/* 학생 이름 그리드 */}
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-4">
                     {category.students.map((student) => (
                       <Link
@@ -72,13 +56,10 @@ const ArtistsPage = () => {
                         to={`/archive/${categoryKey}/${student.workId}`}
                         className="group block"
                       >
-                        <div className="bg-white border-2 border-gray-200 rounded-lg p-4 md:p-4 hover:border-blue-800 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                          {/* 학생 정보  */}
-                          <div className="text-center">
-                            <h4 className="text-base md:text-lg font-bold text-blue-800 group-hover:text-blue-600 transition-colors duration-300">
-                              {student.name}
-                            </h4>
-                          </div>
+                        <div className="text-center p-4 hover:bg-gray-50 rounded-lg transition-all duration-300 transform hover:-translate-y-1">
+                          <h4 className="text-base md:text-lg font-medium text-blue-800 group-hover:text-blue-600 transition-colors duration-300">
+                            {student.name}
+                          </h4>
                         </div>
                       </Link>
                     ))}
