@@ -50,7 +50,7 @@ const ArchivePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category, index) => (
               <Link key={index} to={category.path} className="block group">
-                <div className="relative overflow-hidden rounded-lg bg-white border-2 border-gray-200 hover:border-blue-800 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
+                <div className="relative overflow-hidden rounded-lg bg-white hover:bg-gray-50 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl">
                   {/* 컨텐츠 */}
                   <div className="p-4 md:p-8">
                     <h3 className="text-lg md:text-2xl font-bold text-blue-800 group-hover:text-blue-600 transition-colors duration-300">
@@ -60,6 +60,7 @@ const ArchivePage = () => {
                 </div>
               </Link>
             ))}
+            r
           </div>
         </div>
       </div>
