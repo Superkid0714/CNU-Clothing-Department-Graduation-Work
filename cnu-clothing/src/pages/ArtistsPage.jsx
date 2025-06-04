@@ -38,7 +38,7 @@ const ArtistsPage = () => {
             {Object.entries(artistsByCategory).map(
               ([categoryKey, category]) => (
                 <section key={categoryKey} className="space-y-4 md:space-y-6">
-                  {/* 분야 제목  */}
+                  {/* 분야 제목 */}
                   <div className="flex items-center space-x-3 md:space-x-4">
                     <h3 className="text-2xl md:text-3xl font-bold text-blue-800">
                       {category.title}
