@@ -49,15 +49,24 @@ const ArtistsPage = () => {
                   </div>
 
                   {/* 학생 이름 그리드 */}
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-4">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 md:gap-4">
                     {category.students.map((student) => (
                       <Link
                         key={student.id}
                         to={`/archive/${categoryKey}/${student.workId}`}
                         className="group block"
                       >
-                        <div className="text-center p-4 hover:bg-gray-50 rounded-lg transition-all duration-300 transform hover:-translate-y-1">
-                          <h4 className="text-base md:text-lg font-medium text-blue-800 group-hover:text-blue-600 transition-colors duration-300">
+                        <div
+                          className="py-3 md:py-4 
+                                      transition-all duration-300 ease-out
+                                      md:hover:-translate-y-1
+                                      active:scale-95 active:bg-blue-50 active:text-blue-600"
+                        >
+                          <h4
+                            className="text-sm md:text-base lg:text-lg font-medium text-blue-800 
+                                       transition-colors duration-300
+                                       md:group-hover:text-blue-600 text-center leading-tight"
+                          >
                             {student.name}
                           </h4>
                         </div>
