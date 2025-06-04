@@ -74,7 +74,7 @@ const PreviewPosterPage = () => {
           </div>
 
           {/* 설명 텍스트 */}
-          <div className="mb-8 md:mb-8 text-xs sm:text-sm md:text-sm lg:text-base leading-relaxed text-blue-800 opacity-80 max-w-2xl mx-auto animate-slide-up delay-800">
+          <div className="mb-8 md:mb-8 text-xs sm:text-sm md:text-sm lg:text-base leading-relaxed text-blue-800 opacity-80 max-w-2xl mx-auto animate-slide-up delay-600">
             <p className="mb-6 md:mb-6">
               우리는 하나의 선으로 정의되지 않는다.
             </p>
@@ -106,7 +106,7 @@ const PreviewPosterPage = () => {
           </div>
 
           {/* 전시 정보 */}
-          <div className="mb-10 md:mb-8 text-sm md:text-base text-blue-800 opacity-90 animate-slide-up delay-1000">
+          <div className="mb-10 md:mb-8 text-sm md:text-base text-blue-800 opacity-90 animate-slide-up delay-800">
             <p className="mb-1">Launch Event | June 11 3:00 PM</p>
             <p className="mb-1">Exhibition Period | June 11 – 17, 5:00 PM</p>
             <p className="mb-1">
@@ -144,7 +144,7 @@ const PreviewPosterPage = () => {
       </div>
 
       {/* 푸터 */}
-      <footer className="py-4 text-center text-xs sm:text-sm md:text-base text-blue-800 opacity-70">
+      <footer className="py-4 text-center text-xs sm:text-sm md:text-base text-blue-800 opacity-70 animate-fade-in delay-1200">
         <p>
           © 2025 Chonnam National University Clothing & Textiles Department
         </p>
