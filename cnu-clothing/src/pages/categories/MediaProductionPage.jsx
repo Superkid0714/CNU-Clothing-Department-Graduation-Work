@@ -61,9 +61,6 @@ const MediaProductionPage = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4">
             미디어제작
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl">
-            패션과 미디어가 만나 탄생한 창의적인 콘텐츠 작품들을 만나보세요.
-          </p>
         </div>
       </div>
 

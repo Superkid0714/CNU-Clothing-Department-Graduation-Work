@@ -61,10 +61,6 @@ const TraditionalPage = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4">
             전통복식
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl">
-            우리나라 전통 복식의 아름다움을 현대적으로 재해석한 작품들을
-            만나보세요.
-          </p>
         </div>
       </div>
 

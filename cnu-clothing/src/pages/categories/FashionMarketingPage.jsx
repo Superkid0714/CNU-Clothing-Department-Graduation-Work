@@ -61,10 +61,6 @@ const FashionMarketingPage = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4">
             패션마케팅
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl">
-            패션 비즈니스와 마케팅 전략을 융합한 혁신적인 프로젝트들을
-            만나보세요.
-          </p>
         </div>
       </div>
 

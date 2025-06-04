@@ -121,9 +121,6 @@ const WorksPage = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4">
             작품
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl">
-            다양한 창작 작품들을 만나보세요.
-          </p>
         </div>
       </div>
 

@@ -55,9 +55,6 @@ const ClothingPage = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4">
             클로
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl">
-            클로 카테고리의 창의적이고 독창적인 작품들을 만나보세요.
-          </p>
         </div>
       </div>
 
