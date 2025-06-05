@@ -64,7 +64,7 @@ const WorksPage = () => {
     {
       id: 9,
       title: 'Beyond Reason, Into Light (광란의 빛)',
-      artist: '유재하',
+      artist: '유채하',
       image: '/works/9_main.jpg',
     },
     {
