@@ -326,15 +326,6 @@ const WorkDetailPage = ({ category }) => {
                     className="absolute inset-0 cursor-pointer"
                     onClick={() => openModal(selectedMediaIndex)}
                   />
-
-                  {/* 미디어 타입 표시 */}
-                  {mediaItems[selectedMediaIndex]?.type === 'video' && (
-                    <div className="absolute bottom-4 left-4">
-                      <span className="bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs font-medium">
-                        VIDEO
-                      </span>
-                    </div>
-                  )}
                 </div>
 
                 {/* 썸네일 미디어들 */}
@@ -367,20 +358,15 @@ const WorkDetailPage = ({ category }) => {
                   <div className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full mb-4">
                     {getCategoryName(category)}
                   </div>
-                  <h1 className="text-xl md:text-4xl font-bold text-blue-800 mb-2 leading-tight">
-                    {work.title}
+                  <h1 className="text-lg md:text-2xl lg:text-3xl xl:text-4xl font-bold text-blue-800 mb-2 leading-tight">
+                    {work.title} - {work.artist}
                   </h1>
-                  <div className="flex items-center text-base md:text-lg text-gray-600 mb-6">
-                    <span className="font-semibold text-blue-800">
-                      {work.artist}
-                    </span>
-                  </div>
                 </div>
 
                 {/* 작품 설명 */}
                 <div>
                   <div className="prose prose-gray max-w-none">
-                    <p className="text-xs md:text-base text-gray-700 leading-relaxed whitespace-pre-line">
+                    <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-700 leading-relaxed whitespace-pre-line">
                       {work.description}
                     </p>
                   </div>
@@ -389,15 +375,15 @@ const WorkDetailPage = ({ category }) => {
                 {/* 미디어제작 전용 정보 */}
                 {category === 'media-production' && work.duration && (
                   <div>
-                    <h4 className="text-base md:text-lg font-semibold text-blue-800 mb-3">
+                    <h4 className="text-sm md:text-base lg:text-lg font-semibold text-blue-800 mb-3">
                       작품 정보
                     </h4>
                     <div className="bg-gray-50 p-3 md:p-4 rounded-lg space-y-2">
-                      <p className="text-sm md:text-base">
+                      <p className="text-xs md:text-sm lg:text-base">
                         <span className="font-medium">유형:</span>{' '}
                         {work.mediaType}
                       </p>
-                      <p className="text-sm md:text-base">
+                      <p className="text-xs md:text-sm lg:text-base">
                         <span className="font-medium">재생시간:</span>{' '}
                         {work.duration}
                       </p>
@@ -408,15 +394,15 @@ const WorkDetailPage = ({ category }) => {
                 {/* 패션마케팅 전용 정보 */}
                 {category === 'fashion-marketing' && work.targetAudience && (
                   <div>
-                    <h4 className="text-base md:text-lg font-semibold text-blue-800 mb-3">
+                    <h4 className="text-sm md:text-base lg:text-lg font-semibold text-blue-800 mb-3">
                       마케팅 정보
                     </h4>
                     <div className="bg-gray-50 p-3 md:p-4 rounded-lg space-y-2">
-                      <p className="text-sm md:text-base">
+                      <p className="text-xs md:text-sm lg:text-base">
                         <span className="font-medium">타겟:</span>{' '}
                         {work.targetAudience}
                       </p>
-                      <p className="text-sm md:text-base">
+                      <p className="text-xs md:text-sm lg:text-base">
                         <span className="font-medium">핵심 메시지:</span>{' '}
                         {work.keyMessage}
                       </p>
@@ -430,12 +416,12 @@ const WorkDetailPage = ({ category }) => {
                     {/* 링크 공유 버튼 */}
                     <button
                       onClick={copyToClipboard}
-                      className="inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-gray-700 rounded-lg hover:bg-gray-50 transition-all duration-200 font-medium text-sm md:text-base"
+                      className="inline-flex items-center px-3 py-2 md:px-4 md:py-2 border border-gray-300 bg-white text-gray-700 rounded-lg hover:bg-gray-50 transition-all duration-200 font-medium text-xs md:text-sm lg:text-base"
                     >
                       {copySuccess ? (
                         <>
                           <svg
-                            className="w-4 h-4 md:w-5 md:h-5 mr-2"
+                            className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 mr-1 md:mr-2"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -452,7 +438,7 @@ const WorkDetailPage = ({ category }) => {
                       ) : (
                         <>
                           <svg
-                            className="w-4 h-4 md:w-5 md:h-5 mr-2"
+                            className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 mr-1 md:mr-2"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -473,10 +459,10 @@ const WorkDetailPage = ({ category }) => {
                     {work.instagram && (
                       <button
                         onClick={() => window.open(work.instagram, '_blank')}
-                        className="inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-gray-700 rounded-lg hover:bg-gray-50 transition-all duration-200 font-medium text-sm md:text-base"
+                        className="inline-flex items-center px-3 py-2 md:px-4 md:py-2 border border-gray-300 bg-white text-gray-700 rounded-lg hover:bg-gray-50 transition-all duration-200 font-medium text-xs md:text-sm lg:text-base"
                       >
                         <svg
-                          className="w-4 h-4 md:w-5 md:h-5 mr-2"
+                          className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 mr-1 md:mr-2"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
@@ -598,15 +584,6 @@ const WorkDetailPage = ({ category }) => {
                       aria-label={`미디어 ${index + 1}로 이동`}
                     />
                   ))}
-                </div>
-
-                {/* 미디어 타입 표시 */}
-                <div className="absolute top-4 left-4">
-                  {mediaItems[modalMediaIndex]?.type === 'video' && (
-                    <span className="bg-black bg-opacity-50 text-white px-3 py-1 rounded text-sm font-medium">
-                      VIDEO
-                    </span>
-                  )}
                 </div>
               </>
             )}

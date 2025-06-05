@@ -214,6 +214,8 @@ const worksData = {
       artist: '오현경',
       category: 'works',
       description: `번데기의 모습은 마치 멈춘 듯 보이지만 성충이 되기 위해 거쳐야 하는 과정이다. 그 속에선 나비가 되어 날아오르기 위한 준비는 이미 꿈틀대고 있다. 화려하진 않지만 성장을 위해 변화하고 있는 과도기적인 모습을 번데기에 투영하여 나타냈다. 우리의 비상은 이미 조용히, 그러나 분명히 시작되었다.`,
+      instagram:
+        'https://www.instagram.com/o_hkyung?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D',
       images: [
         '/works/2_main.jpg',
         '/works/2_sub(1).jpg',
@@ -297,6 +299,8 @@ const worksData = {
       title: 'Beyond Reason, Into Light (광란의 빛)',
       artist: '유채하',
       category: 'works',
+      instagram:
+        'https://www.instagram.com/xuxxaexa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D',
       description: `"미친 사람은 결국, 가장 빛난다." 우리는 단순한 열정이 아닌, 광기에 가까운 몰입에서 아름다움을 찾는다. 타인의 시선도, 현실의 제약도 중요하지 않다. 끝없이 파고들고 집요하게 물고 늘어질 때, 그때 비로소 무언가가 태어난다. 이 작품은 고딕 양식의 어둠 속, 스스로의 욕망에 사로잡혀 끝없이 전진하는 인간의 본능을 담아냈다. 깨끗함보다는 왜곡된 우아함, 균형보다는 집요함을 입은 형태. 광기 그 자체가 빛이 되어버린 순간, 우리는 자신만의 길을 입는다.`,
       images: ['/works/9_main.jpg', '/works/9_sub(1).jpg'],
     },
@@ -321,6 +325,8 @@ const worksData = {
       artist: '안정윤',
       category: 'works',
       description: `‘열화(熱火); 뜨거운 불길이라는 뜻으로, 매우 격렬한 열정을 비유적으로 이르는 말.’ 열정이라는 단어에 늘 뒤따르는 ‘불’ 우리의 열정은 때로, 얼어붙은 몸을 녹여 다시 움직일 힘을 주는 모닥불 같기도 하고, 감당할 수 없을 만큼 커져 모든 것을 집어삼킬 화염 같아 보이기도 하며, 더 이상 타오를 것 없는 잿더미 같아 보이기도 한다. 피어나고, 불타오르고, 사라지기를 수없이 반복하다 비로소 모든 불씨가 거둬지는 그 순간. 나, 그리고 나를 거쳐 간 수많은 열정은 재가 되어 사라진다. 그러니 작은 시련에도 휘청이는 스스로를 채찍질하지도 말고, 타오르고 찢어지고 녹아내린 마음을 뒤로한 채 모든 것을 쏟아붓지도 말고, 실패를 마주했을 때 이제 다시는 일어서지 못할 거라며 낙담하지도 않기를 바란다. 우리의 열정은 반드시 다시 피어날 것이고, 역설적이게도, 모두에게 공평할 필연으로, 반드시 사라질 것이기에`,
+      instagram:
+        'https://www.instagram.com/j__y0_0n?igsh=MTVnaGRwMHU1bDUzZQ%3D%3D&utm_source=qr',
       images: [
         '/works/11_main.jpg',
         '/works/11_sub(1).jpg',
@@ -347,6 +353,8 @@ const worksData = {
       title: '화무십일홍 : 花無十日紅',
       artist: '김소민',
       category: 'works',
+      instagram:
+        'https://www.instagram.com/sxmclr/profilecard/?igsh=MTR5MW5sb3lmZDQwMw%3D%3D',
       description: `모든 꽃은 언젠가 지기 마련입니다. 화려하게 피어났다 사그라드는 그 그림자 속에서, 다시 피어날 작은 마음을 담아 제작했습니다. 순간이 영원이 되는 장면을 만나보세요.`,
       images: [
         '/works/13_main.jpg',
@@ -360,6 +368,7 @@ const worksData = {
       artist: '조수아',
       category: 'works',
       description: `점은 선이 되고, 선은 면이 되어 마침내 하나의 형태에 이른다. 이 익숙한 조형의 흐름을 거슬러, 완성이라는 환상을 해체한다. 완전한 형태 뒤에 숨겨진 구조와 과정을 되묻고자, 완전한 후드의 패턴을 분해하고 재조합해, 형태의 본질과 그 경계를 되묻는다. 이는 단순한 해체가 아닌, 보이지 않던 흐름과 잔상을 포착하는 조형적 사유의 과정이다.`,
+      instagram: 'https://www.instagram.com/j_7a._/',
       images: [
         '/works/14_main.jpg',
         '/works/14_sub(1).jpg',
@@ -394,7 +403,11 @@ const worksData = {
       title: '불편한 실용성 (hostile architecture)',
       artist: '전은서',
       category: 'works',
-      description: `적대적 건축은 무주택자 즉 노숙자들의 길거리의 숙박을 막기 위해 설계된 건축물이다. 이는 누군가에겐 편안한 팔걸이로, 잠시 앉아있거나 기대었다 갈 수 있는 도심 속 실용성을 주는 건축물이지만, 그 건축물들은 하룻밤을 지내야하는 그들에겐 길거리 속 잠을 방해하는 불편한 요소에 지나지 않는다. 어딘가 튀어 나와있어 편하게 눕지 못하는 모습, 지퍼와 주머니 등 옷에서 실용성을 주는 부분들을 탐구하여 우리가 느끼는 편안함과 실용성에 대해 질문을 던진다.`,
+      description: `적대적 건축은 무주택자 즉 노숙자들의 길거리의 숙박을 막기 위해 설계된 건축물이다. 이는 누군가에겐 편안한 팔걸이로, 잠시 앉아있거나 기대었다 갈 수 있는 도심 속 실용성을 주는 건축물이지만, 그 건축물들은 하룻밤을 지내야하는 그들에겐 길거리 속 잠을 방해하는 불편한 요소에 지나지 않는다. 어딘가 튀어 나와있어 편하게 눕지 못하는 모습, 지퍼와 주머니 등 옷에서 실용성을 주는 부분들을 탐구하여 우리가 느끼는 편안함과 실용성의 본질에 대해 질문을 던진다.
+      
+      The fakir’s rest (Gilles Paté, Stéphane Argillet, Paris 2003), Achisuits (Sarah Ross 2005 - 2006)`,
+      instagram:
+        'https://www.instagram.com/xdi_ta?igsh=MWdvMjc5YXVpYjkycQ%3D%3D',
       images: [
         '/works/16_main.jpg',
         '/works/16_sub(1).jpg',
@@ -433,7 +446,7 @@ const worksData = {
       title: 'Cotton is the best flower.',
       artist: '박주영',
       category: 'media-production',
-      description: `제가 선보인 6피스의 옷은 화려함과 궤를 달리합니다. 디자인을 떠올리다 스쳐 지나간 목화를 따던 농부의 모습, 목화의 촉감과 포근함. 그 투박한 생각이 결국 원천이 되어 머릿속에 있던 목화의 순순함을 담은 디자인을 상투적인 손짓으로 자아냈습니다. 조그마한 부록 속에는 미숙한 호기로움으로 풀어낸 목화에 대한 이야기와 6피스 옷 제작하며 쌓아온 과정이 담겨 있습니다. 목화 오름 정보란 대표와의 인터뷰, 목화에 대한 간단한 칼럼, 의상 제작 과정 등 다양한 콘텐츠를 조화롭게 녹여냈습니다. 빈약하고, 투박할지 몰라도 너그러운 마음으로 저의 작품을 천천히 관람해 주시길 바랍니다.`,
+      description: `흔하디흔한, 가장 평범한, 그런 순백에 끌렸습니다. 개화가 아닌 화사 후에 모습을 들어내는 목화솜이라는 친숙한 봉오리가 갖는 명확할 수 없는 매력에. 우연한 기회로 방문했던 신한 방직에서 창고에 일제히 들어선 오판화의 솜털 다발이 실과 원단이 되어가는 순간을 눈에 담으니 그제야 목화가 달리 보였습니다. 제가 선보인 6피스의 옷은 화려함과는 궤를 달리합니다. 머릿속을 스쳐 지나간 목화를 따던 농부의 행색, 목화솜의 촉감과 포근함. 그 투박한 생각들이 원천이 되어 목화의 순수함을 상투적인 손짓으로 자아냈습니다. 프로젝트를 통해 제작한 부록 속에는 목화에 대한 조금 더 깊은 이야기가 담겨있습니다. 목화에 관한 여러 정보부터 제주도에서 목화를 꽃 피우는 농부와의 인터뷰까지, 보다 다양한 컨텐츠를 의류 제작 과정과 엮어 80페이지 남짓한 종이 속에 담아내려 부단히 노력하였습니다. 저의 4년을 담아내기엔 몹시 빈약할지도 모르지만, 존경하고 찬미하는 이들의 도움이 있었기에. 무사히 대학 생활에 마침표를 찍을 수 있었습니다. 관심을 가져주셔서 감사합니다. 저의 호기이자 어설픈 호흡에`,
       images: [
         '/media-production/2_main.jpg',
         '/media-production/2_sub(1).jpg',
@@ -499,6 +512,8 @@ const worksData = {
       artist: '정은정',
       category: 'fashion-marketing',
       description: `삶은 현실과 이상, 필연성과 욕망 사이에 존재합니다. sez는 오피스룩의 구조적인 실루엣에 펑크의 자유로운 감성을 결합해, 스타일은 태도라는 믿음 아래 삶을 입는 방식을 전개하는 브랜드입니다.`,
+      instagram:
+        'https://www.instagram.com/zuneeong?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D',
       images: [
         '/fashion-marketing/1_main.jpg',
         '/fashion-marketing/1_sub(1).jpg',
@@ -514,6 +529,8 @@ const worksData = {
       artist: '문서희',
       category: 'fashion-marketing',
       description: `사계절은 단순히 날씨의 변화만을 의미하지 않습니다. 각각의 계절은 해마다 찾아와 익숙하게 우리의 감정과 기억을 자극하기도, 때로는 낯선 감정을 일깨우며 새로운 이야기를 만들어가기도 합니다. EASON은 계절의 소중한 순간과 감정에 주목합니다. 계절이 주는 특별한 감각과 이야기를 옷에 담아, 계절과 함께 살아가는 경험을 제안하는 따뜻한 동반자가 되고자 합니다. 모든 계절이 누군가에게 따뜻한 기억으로 남을 수 있기를 바랍니다.`,
+      instagram:
+        'https://www.instagram.com/seo_hyee?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D',
       images: [
         '/fashion-marketing/2_main.jpg',
         '/fashion-marketing/2_sub(1).jpg',
@@ -544,6 +561,8 @@ Brand CONCEPT
 - Timeless 시간이 지나도 유행을 타지 않는 디자인
 - sustainable 지속 가능한 소재와 제작 방식
 - Reliable 신뢰할 수 있는 품질과 착용감`,
+      instagram:
+        'https://www.instagram.com/_shin.dsl__?igsh=ZWZ6cDJseHV3NGMx&utm_source=qr',
       images: [
         '/fashion-marketing/3_main.jpg',
         '/fashion-marketing/3_sub(1).jpg',
@@ -567,6 +586,7 @@ Brand CONCEPT
 더 나은 공간을 향해, 더 따뜻한 내일을 향해!
 
 to more room, to tomorrow!`,
+      instagram: 'https://www.instagram.com/to.mo.room/',
       images: [
         '/fashion-marketing/4_main.jpg',
         '/fashion-marketing/4_sub(1).jpg',
