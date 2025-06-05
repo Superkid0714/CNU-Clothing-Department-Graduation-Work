@@ -127,6 +127,8 @@ const worksData = {
       
       이들이 조화롭게 어울려 함께 빛나는 특별한 순간을 
       만들어내는 과정에 함께하실래요?`,
+      instagram:
+        'https://www.instagram.com/fleurmer._/?utm_source=ig_web_button_share_sheet',
       images: [
         '/traditional/2_main.jpg',
         '/traditional/2_sub(1).jpg',
@@ -375,6 +377,17 @@ const worksData = {
         '/works/15_sub(1).jpg',
         '/works/15_sub(2).jpg',
       ],
+      videos: [
+        {
+          src: '/works/15_Video_1.mp4',
+        },
+        {
+          src: '/works/15_Video_2.mp4',
+        },
+        {
+          src: '/works/15_Video_3.mp4',
+        },
+      ],
     },
     {
       id: 16,
@@ -386,6 +399,14 @@ const worksData = {
         '/works/16_main.jpg',
         '/works/16_sub(1).jpg',
         '/works/16_sub(2).jpg',
+      ],
+      videos: [
+        {
+          src: '/works/16_Video_1.mp4',
+        },
+        {
+          src: '/works/16_Video_2.mp4',
+        },
       ],
     },
   ],
