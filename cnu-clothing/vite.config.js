@@ -3,12 +3,19 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  publicDir: 'public', // 명시적으로 public 디렉터리 지정
+  publicDir: 'public',
   server: {
     fs: {
-      strict: false, // 파일 시스템 접근 제한 완화
+      strict: false,
     },
+    // 모든 라우트를 index.html로 리다이렉트
+    historyApiFallback: true,
   },
   // 정적 자산 처리 설정
   assetsInclude: ['**/*.jpg', '**/*.jpeg', '**/*.png', '**/*.gif', '**/*.svg'],
+
+  // 프리뷰 모드에서도 히스토리 API 폴백 적용
+  preview: {
+    historyApiFallback: true,
+  },
 });
