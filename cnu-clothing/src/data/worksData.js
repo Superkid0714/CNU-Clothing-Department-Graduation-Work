@@ -8,7 +8,12 @@ const worksData = {
       category: 'clo',
       description: `불 속에서의 소멸과 부활을 통해, 
       강인한 정신과 재생의 서사를 시각적으로 풀어낸다.`,
-      images: ['/clothing/1_main.jpg', '/clothing/1_sub.jpg'],
+      images: [
+        '/clothing/1_main.jpg',
+        '/clothing/1_sub(1).jpg',
+        '/clothing/1_sub(2).jpg',
+        '/clothing/1_sub(3).jpg',
+      ],
     },
     {
       id: 2,
@@ -21,7 +26,12 @@ const worksData = {
 
       이러한 현실을 상반되는 2개의 스타일이 어우러지도록 
       함으로써 정돈된 사회의 한편엔 일탈이 공존함을 표현했다.`,
-      images: ['/clothing/2_main.jpg', '/clothing/2_sub.jpg'],
+      images: [
+        '/clothing/2_main.jpg',
+        '/clothing/2_sub(1).jpg',
+        '/clothing/2_sub(2).jpg',
+        '/clothing/2_sub(3).jpg',
+      ],
     },
     {
       id: 3,
@@ -33,7 +43,11 @@ const worksData = {
       모든 틀에서 벗어나고자 한다.
       무심한 벨트와 프린지, 큼직한 주얼리 그리고 풍성한 헴라인
       그 사이로 들의 내음이 지나간다`,
-      images: ['/clothing/3_main.jpg', '/clothing/3_sub.jpg'],
+      images: [
+        '/clothing/3_main.jpg',
+        '/clothing/3_sub(1).jpg',
+        '/clothing/3_sub(2).jpg',
+      ],
     },
     {
       id: 4,
@@ -46,6 +60,7 @@ const worksData = {
         '/clothing/4_sub(1).jpg',
         '/clothing/4_sub(2).jpg',
         '/clothing/4_sub(3).jpg',
+        '/clothing/4_sub(4).jpg',
       ],
     },
     {
@@ -66,7 +81,12 @@ const worksData = {
       마치 물이 흐르고, 차오르고, 흩날리듯
       일렁이는 감정의 흐름 속 치유의 여정을 
       섬세한 시각적 언어로 담아낸다.`,
-      images: ['/clothing/5_main.jpg'],
+      images: [
+        '/clothing/5_main.jpg',
+        '/clothing/5_sub(1).jpg',
+        '/clothing/5_sub(2).jpg',
+        '/clothing/5_sub(3).jpg',
+      ],
     },
   ],
 
@@ -97,6 +117,9 @@ const worksData = {
         '/traditional/2_main.jpg',
         '/traditional/2_sub(1).jpg',
         '/traditional/2_sub(2).jpg',
+        '/traditional/2_sub(3).jpg',
+        '/traditional/2_sub(4).jpg',
+        '/traditional/2_sub(5).jpg',
       ],
     },
     {
@@ -179,6 +202,8 @@ const worksData = {
         '/works/2_main.jpg',
         '/works/2_sub(1).jpg',
         '/works/2_sub(2).jpg',
+        '/works/2_sub(3).jpg',
+        '/works/2_sub(4).jpg',
       ],
     },
     {
@@ -257,7 +282,7 @@ const worksData = {
       artist: '유채하',
       category: 'works',
       description: `"미친 사람은 결국, 가장 빛난다." 우리는 단순한 열정이 아닌, 광기에 가까운 몰입에서 아름다움을 찾는다. 타인의 시선도, 현실의 제약도 중요하지 않다. 끝없이 파고들고 집요하게 물고 늘어질 때, 그때 비로소 무언가가 태어난다. 이 작품은 고딕 양식의 어둠 속, 스스로의 욕망에 사로잡혀 끝없이 전진하는 인간의 본능을 담아냈다. 깨끗함보다는 왜곡된 우아함, 균형보다는 집요함을 입은 형태. 광기 그 자체가 빛이 되어버린 순간, 우리는 자신만의 길을 입는다.`,
-      images: ['/works/9_main.jpg'],
+      images: ['/works/9_main.jpg', '/works/9_sub(1).jpg'],
     },
     {
       id: 10,
@@ -286,6 +311,7 @@ const worksData = {
         '/works/11_sub(2).jpg',
         '/works/11_sub(3).jpg',
         '/works/11_sub(4).jpg',
+        '/works/11_sub(5).jpg',
       ],
     },
     {
@@ -294,7 +320,11 @@ const worksData = {
       artist: '박찬희',
       category: 'works',
       description: `우리는 모두 언덕 앞에서 망설인다. 저 너머엔 무엇이 있을까? 두려움 앞에 선 우리는 마침내 파란 언덕을 넘어선다.두려움에서 자유로. 흐름과 해방, 그 변화의 순간을 옷에 담았다.`,
-      images: ['/works/12_main.jpg', '/works/12_sub(1).jpg'],
+      images: [
+        '/works/12_main.jpg',
+        '/works/12_sub(1).jpg',
+        '/works/12_sub(2).jpg',
+      ],
     },
     {
       id: 13,
@@ -304,8 +334,8 @@ const worksData = {
       description: `모든 꽃은 언젠가 지기 마련입니다. 화려하게 피어났다 사그라드는 그 그림자 속에서, 다시 피어날 작은 마음을 담아 제작했습니다. 순간이 영원이 되는 장면을 만나보세요.`,
       images: [
         '/works/13_main.jpg',
-        '/works/13_sub(3).jpg',
-        '/works/13_sub(4).jpg',
+        '/works/13_sub(1).jpg',
+        '/works/13_sub(2).jpg',
       ],
     },
     {
@@ -314,7 +344,11 @@ const worksData = {
       artist: '조수아',
       category: 'works',
       description: `점은 선이 되고, 선은 면이 되어 마침내 하나의 형태에 이른다. 이 익숙한 조형의 흐름을 거슬러, 완성이라는 환상을 해체한다. 완전한 형태 뒤에 숨겨진 구조와 과정을 되묻고자, 완전한 후드의 패턴을 분해하고 재조합해, 형태의 본질과 그 경계를 되묻는다. 이는 단순한 해체가 아닌, 보이지 않던 흐름과 잔상을 포착하는 조형적 사유의 과정이다.`,
-      images: ['/works/14_main.jpg', '/works/14_sub(1).jpg'],
+      images: [
+        '/works/14_main.jpg',
+        '/works/14_sub(1).jpg',
+        '/works/14_sub(2).jpg',
+      ],
     },
     {
       id: 15,
@@ -322,7 +356,11 @@ const worksData = {
       artist: '최훈비',
       category: 'works',
       description: `옷은 마모, 찢어짐, 주름 등의 변화 속에 인간의 흔적을 품는다.인간의 삶 역시 피부에 남은 압박의 자국, 무의식적인 몸짓으로 반복되는 매무새 정돈, 상황에 따른 옷차림의 선택 등, 옷에 의한 감각적 상호작용의 순간들로 구성된다. 인간과 옷은 시간 속에서 서로의 실존을 덧입으며, 그 감각적 흔적을 매개로 한 존재의 결과물이자, 서로의 기억이 된다.<입혀진 실존>에서 활용된 밀랍 개발 소재와 온도 반응 섬유는 인간의 체온, 움직임, 압력, 접촉과 같은 감각적 상호작용을 섬유 표면에 물리적으로 기록하며, 비가시적 관계의 흔적을 시각화하는 역할을 수행한다.밀랍 처리 소재는 힘이 가해진 순간의 흔적을 응고된 시간처럼 표면에 보존하며, 감온 소재는 체온이라는 생리적 신호에 반응하여, 접촉이 남긴 열감과 정서의 흔들림을 색의 변화로 드러낸다.감각과 기억의 매트릭스 안에서, 옷과 인간의 실존은 끊임없는 대화 속에 놓인다.우리는 이 옷들을 통해 사라진 존재를 느끼는 것이 아니라, 그 존재가 남긴 흔적의 감각을 다시 살아보는 경험을 하게 된다.`,
-      images: ['/works/15_main.jpg', '/works/15_sub(1).jpg'],
+      images: [
+        '/works/15_main.jpg',
+        '/works/15_sub(1).jpg',
+        '/works/15_sub(2).jpg',
+      ],
     },
     {
       id: 16,
@@ -330,7 +368,11 @@ const worksData = {
       artist: '전은서',
       category: 'works',
       description: `적대적 건축은 무주택자 즉 노숙자들의 길거리의 숙박을 막기 위해 설계된 건축물이다. 이는 누군가에겐 편안한 팔걸이로, 잠시 앉아있거나 기대었다 갈 수 있는 도심 속 실용성을 주는 건축물이지만, 그 건축물들은 하룻밤을 지내야하는 그들에겐 길거리 속 잠을 방해하는 불편한 요소에 지나지 않는다. 어딘가 튀어 나와있어 편하게 눕지 못하는 모습, 지퍼와 주머니 등 옷에서 실용성을 주는 부분들을 탐구하여 우리가 느끼는 편안함과 실용성에 대해 질문을 던진다.`,
-      images: ['/works/16_main.jpg'],
+      images: [
+        '/works/16_main.jpg',
+        '/works/16_sub(1).jpg',
+        '/works/16_sub(2).jpg',
+      ],
     },
   ],
 
@@ -472,7 +514,6 @@ Brand CONCEPT
         '/fashion-marketing/3_sub(1).jpg',
         '/fashion-marketing/3_sub(2).jpg',
         '/fashion-marketing/3_sub(3).jpg',
-        '/fashion-marketing/3_sub(4).jpg',
       ],
     },
     {
