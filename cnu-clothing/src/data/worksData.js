@@ -255,7 +255,12 @@ const worksData = {
       artist: 'DAI CHUNHUI',
       category: 'works',
       description: `진정한 럭셔리는 얼마나 많은 자원을 약탈하느냐가 아니라, 만물과 공생할 수 있느냐에 달려 있다.채식주의의 핵심 가치 중 하나는 생명 존중이다.반짝이 원단이 녹색 광택에서 점차 변화하는 것은 숲, 오로라 등의 자연 현상을 반영하며, 인류 문명은 약탈이 아닌 식물처럼 생태와 공생해야 함을 암시한다.`,
-      images: ['/works/5_main.jpg', '/works/5_sub(1).jpg'],
+      images: [
+        '/works/5_main.jpg',
+        '/works/5_sub(1).jpg',
+        '/works/5_sub(2).jpg',
+        '/works/5_sub(3).jpg',
+      ],
     },
     {
       id: 6,
@@ -315,8 +320,6 @@ const worksData = {
         '/works/10_sub(1).jpg',
         '/works/10_sub(2).jpg',
         '/works/10_sub(3).jpg',
-        '/works/10_sub(4).jpg',
-        '/works/10_sub(5).jpg',
       ],
     },
     {
@@ -373,6 +376,8 @@ const worksData = {
         '/works/14_main.jpg',
         '/works/14_sub(1).jpg',
         '/works/14_sub(2).jpg',
+        '/works/14_sub(3).jpg',
+        '/works/14_sub(4).jpg',
       ],
     },
     {
@@ -392,9 +397,6 @@ const worksData = {
         },
         {
           src: '/works/15_Video_2.mp4',
-        },
-        {
-          src: '/works/15_Video_3.mp4',
         },
       ],
     },
@@ -537,6 +539,7 @@ const worksData = {
         '/fashion-marketing/2_sub(2).jpg',
         '/fashion-marketing/2_sub(3).jpg',
         '/fashion-marketing/2_sub(4).jpg',
+        '/fashion-marketing/2_sub(5).jpg',
       ],
     },
     {
@@ -606,6 +609,9 @@ to more room, to tomorrow!`,
         '/fashion-marketing/5_main.jpg',
         '/fashion-marketing/5_sub(1).jpg',
         '/fashion-marketing/5_sub(2).jpg',
+        '/fashion-marketing/5_sub(3).jpg',
+        '/fashion-marketing/5_sub(4).jpg',
+        '/fashion-marketing/5_sub(5).jpg',
       ],
     },
     {
