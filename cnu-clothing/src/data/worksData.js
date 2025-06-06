@@ -148,7 +148,7 @@ const worksData = {
         '/traditional/3_main.jpg',
         '/traditional/3_sub(1).jpg',
         '/traditional/3_sub(2).jpg',
-        '/traditional/3_sub(e).jpg',
+        '/traditional/3_sub(3).jpg',
         '/traditional/3_sub(4).jpg',
         '/traditional/3_sub(5).jpg',
       ],
