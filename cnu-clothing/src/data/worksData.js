@@ -282,7 +282,6 @@ const worksData = {
         '/works/7_sub(2).jpg',
         '/works/7_sub(3).jpg',
         '/works/7_sub(4).jpg',
-        '/works/7_sub(5).jpg',
       ],
     },
     {
