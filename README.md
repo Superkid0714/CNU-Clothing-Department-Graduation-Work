@@ -1,4 +1,5 @@
-# 2025 전남대학교 의류학과 졸업작품 전시페이지 : Parergon - Layered Being
+# 2025 전남대학교 의류학과 졸업작품 전시페이지 
+# Parergon - Layered Being
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/8843e02c-6419-4fd6-a578-0b97017b38d8" />
 
