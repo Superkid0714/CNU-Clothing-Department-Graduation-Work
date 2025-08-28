@@ -56,6 +56,18 @@ cnu-clothing/
 └── vite.config.js
 ```
 
+## 😀 배포 및 사용
+
+<img width="1274" height="716" alt="image" src="https://github.com/user-attachments/assets/1cf3130b-76ae-4ca2-aa41-c33b93260fb6" />
+
+<img width="1164" height="709" alt="image" src="https://github.com/user-attachments/assets/5143bd39-1c64-4af9-bebb-c1da285be9f3" />
+
+<img width="1276" height="712" alt="image" src="https://github.com/user-attachments/assets/48842563-2f1f-466b-b987-d056ffbfb8fd" />
+
+[2025 전남대 의류학과 졸업작품 전시 페이지](https://cnu-clothing-department-graduation-work.vercel.app/)
+
+
+
 ## ⚙️ 설치 및 실행
 
 프로젝트를 로컬 환경에서 실행하려면 다음 단계를 따르세요
