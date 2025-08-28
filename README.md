@@ -1,6 +1,7 @@
 # CNU Clothing & Textiles 2025 Graduation Show: Parergon - Layered Being
 
-이 프로젝트는 전남대학교 의류학과 2025년 졸업 작품 전시회인 "Parergon: Layered Being"을 위한 웹사이트입니다 학생들의 다양한 작품을 전시하고, 각 작품에 대한 상세 정보와 아티스트 정보를 제공합니다
+이 프로젝트는 전남대학교 의류학과 2025년 졸업 작품 전시회인 "Parergon: Layered Being"을 위한 웹사이트입니다 
+학생들의 다양한 작품을 전시하고, 각 작품에 대한 상세 정보와 아티스트 정보를 제공합니다
 
 ## 🚀 주요 기능
 
