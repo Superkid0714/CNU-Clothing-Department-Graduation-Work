@@ -72,7 +72,7 @@ cnu-clothing/
 
 [2025 전남대 의류학과 졸업작품 전시 페이지](https://cnu-clothing-department-graduation-work.vercel.app/)
 
-
+[Velog](https://velog.io/@newkid0714/2025-%EC%A0%84%EB%82%A8%EB%8C%80-%EC%9D%98%EB%A5%98%ED%95%99%EA%B3%BC-%EC%A1%B8%EC%97%85%EC%A0%84%EC%8B%9C%ED%9A%8C)
 
 ## ⚙️ 설치 및 실행
 
